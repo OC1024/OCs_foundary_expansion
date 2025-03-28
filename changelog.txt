@@ -1,0 +1,30 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 2025-03-13
+  Minor Features:
+    - Added a non-lava recipe for military science to be useful outside of Vulcanus.
+    - Added productivity researches for all science packs. 
+    - Productivity tech for planetary science packs (space, metallurgy, agriculture, electromagnetic; cryogenic, promethium) are optional with userdefined max level (or infinite).
+    - Added a research speed tech with promethium science, parallel to the lab prod tech. (not yet implemented)
+  Changes:
+    - Alternative science pack recipes are now core feature, not optional anymore.
+    - Moved chemical and space science packs from cryogenetic plant to biochamber.
+    - Moved production science pack from foundry to em-plant.
+    - Use the only sane date format with ISO 8601.
+    - Removed armour plating and added it to the ammo casting mod.
+  Bugfixes:
+    - Fixed that engine-unit was handcraftable in beezelo's foundry mod. Now it's again as it should be, not.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 2025-01-12
+  Major Features:
+    - Initial idea.
+    - English and German localisation.
+    - Optionally alternative science pack recipes: casting automation, logistics and production science packs in the foundry; chemical space, and cryogenic science packs in the cryogenetic plant; EM science pack in the EM plant.
+  Minor Features:
+    - Dependency of my other mods.
+    - Added optional dependency of the mod "foundry expanded" by beezelo & "EM-plant expanded", which both fit perfectly in the theme. No change was done to the mod and this is a modpack.
+  Naming Note:
+    - Renamed original mod to OCs_stone_casting.
+    - Inheritance of the version number 0.3.0 from the old mod with this name.
+    - I know there's a typo in the internal mod name but it's not easy to fix that.
