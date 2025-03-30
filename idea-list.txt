@@ -19,7 +19,7 @@
     - hot core fragments can be decanted into fractions (aka stone and metals) in the advanced foundry
     - cold core fragments can be re-heated in the converter
 
-Orer:
+Order:
 1. item
 2. recipe
 3. technologies
