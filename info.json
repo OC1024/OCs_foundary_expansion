@@ -1,6 +1,6 @@
 {
   "name": "OCs_foundary_expansion",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "title": "OCs Foundry Expansion",
   "author": "OC1024",
   "description": "This will be the modpack mod for all of the OC mods. Work in progress. It does indeed also add new mechanics and items itself but some core elements are outsourced to the submods. Also the two optional '~ expanded' are there for the theme and not because they are modified.",
@@ -8,12 +8,12 @@
   "dependencies": [
     "base >= 2.0",
     "space-age",
+    "OCs_base_assets >= 0.2.0",
+    "OCs_alt_sciences",
     "OCs_ammo_casting",
     "OCs_stone_casting",
     "? OCs_core_extraction",
     "? foundry-expanded",
-    "? electromagnetic-plant-expanded",
-    "? scattergun_turret >= 8.0.0",
-    "! ICastBullets"
+    "? electromagnetic-plant-expanded"
   ]
 }

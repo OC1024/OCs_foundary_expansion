@@ -1,6 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+Date: 2025-04-08
+  Minor Features:
+    - Reintroducing the advanced foundry to this mod. Temporarily was in the OCs_core_extraction mod.
+    - Added few more recipes to the foundry.
+  Other:
+    - Updated dependency of my base mod.
+    - German localisation now has different word order.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 2025-04-06
+  Changes:
+    - Moved all science pack recipes to the new submod "OCs_alt_sciences".
+    - Moved all helper functions and overlay icons into the new submod "OCs_base_assets".
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
-Date: 2025-03-13
+Date: 2025-04-05
   Minor Features:
     - Added a non-lava recipe for military science to be useful outside of Vulcanus.
     - Added productivity researches for all science packs. 
@@ -11,7 +26,7 @@ Date: 2025-03-13
     - Moved chemical and space science packs from cryogenetic plant to biochamber.
     - Moved production science pack from foundry to em-plant.
     - Use the only sane date format with ISO 8601.
-    - Removed armour plating and added it to the ammo casting mod.
+    - Removed armour plating and added it to the "OCs ammo and armor" mod.
   Bugfixes:
     - Fixed that engine-unit was handcraftable in beezelo's foundry mod. Now it's again as it should be, not.
 ---------------------------------------------------------------------------------------------------

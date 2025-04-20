@@ -1,6 +1,6 @@
   Items:
     - drilling heads, extension rods, concrete hull parts (consumable)
-    - armored plates (usage?)
+
     - core fragments
     - maybe unique ressource per planet
     - space platform alt recipe with tungsten and/or LDS
@@ -24,3 +24,8 @@ Order:
 2. recipe
 3. technologies
 4. bug-fixing
+
+divide liquid use by amout of recipe.result such that eg. fast-underground-trasport-belt wich uses 5 of 10 transport-belt as ingredient
+make auto-blacklist by category instead of list of recipes defined as in category
+make the convetor can only heat fragments and not smelt anything
+introducing a "transport-belt" liquid just to adore my error and to fuck up any player including myself.
