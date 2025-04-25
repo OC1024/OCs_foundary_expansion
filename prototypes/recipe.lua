@@ -255,8 +255,8 @@ data:extend({
     type = "recipe",
     name = "tungsten-space-platform-foundation",
     category = "crafting-with-fluid-or-metallurgy",
-    subgroup = "space-related",
-    order = "a[space-platform-foundation]-c[tungsten]",
+    -- subgroup = "space-related",
+    -- order = "a[space-platform-foundation]-c[tungsten]",
     icons = {
       {
         icon = "__space-age__/graphics/icons/space-platform-foundation.png",
@@ -264,11 +264,9 @@ data:extend({
         icon_mipmaps = 4,
       },
       {
-        icon = "__space-age__/graphics/icons/tungsten-plate.png",
+        icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-tungsten-plate.png",
         icon_size = 64,
         icon_mipmaps = 4,
-        -- icon_scale = 4,
-        icon_shift = {8,8},
       }
     },
     enabled = false,
