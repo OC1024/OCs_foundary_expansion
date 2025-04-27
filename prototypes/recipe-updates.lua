@@ -5,16 +5,19 @@ local casting_list = {
   "splitter",
   "fast-transport-belt",
   "fast-underground-belt",
-  -- "fast-splitter",
+  "fast-splitter",
   "express-transport-belt",
-  -- "express-splitter",
+  "express-splitter",
   "express-underground-belt",
   "turbo-transport-belt",
-  -- "turbo-splitter",
+  "turbo-splitter",
   "turbo-underground-belt",
+
+  "steam-engine",
   "heat-exchanger",
   "heat-pipe",
   "steam-turbine",
+
   "solar-panel",
   "steel-furnace",
   "steel-chest",
@@ -23,7 +26,10 @@ local casting_list = {
   -- "plastic-bar", -- blacklisted by item and/or category
   -- "solid-fuel-from-light-oil", -- blacklisted by ingredients
   -- "tungsten-carbide", -- all inputs are blacklisted or native liquid
-  "tungsten-space-platform-foundation"
+  "tungsten-space-platform-foundation",
+
+  "car",
+  "tank",
   -- extend as needed
 }
 batch_generate_castings(casting_list)

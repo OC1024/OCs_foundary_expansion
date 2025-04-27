@@ -14,7 +14,7 @@ data:extend({
     icon_draw_specification = {scale = 2.5, shift = {0, 0}},
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1.0, result = "advanced-foundry"},
-    max_health = 500,
+    max_health = 640,
     corpse = "foundry-remnants",
     dying_explosion = "foundry-explosion",
     collision_box = {{-3.7, -3.7}, {3.7, 3.7}}, -- 8x8 building
@@ -24,10 +24,10 @@ data:extend({
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
-        emissions_per_minute = { pollution = 30 },
+        emissions_per_minute = { pollution = 16 },-- 6 for normal foundry
     },
-    energy_usage = "5MW",
-    ingredient_count = 4, -- Maximum number of ingredients for recipes
+    energy_usage = "8MW", -- 2.5MW for normal foundry
+    ingredient_count = 6, -- Maximum number of ingredients for recipes
     graphics_set = -- graphics by Hurricane
     {
       animation =

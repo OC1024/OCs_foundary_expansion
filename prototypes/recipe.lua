@@ -264,7 +264,7 @@ data:extend({
         icon_mipmaps = 4,
       },
       {
-        icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-tungsten-plate.png",
+        icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-tungsten-plate-shifted.png",
         icon_size = 64,
         icon_mipmaps = 4,
       }
