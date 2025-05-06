@@ -1,34 +1,33 @@
 -- used for testing the casting-generator
-local casting_list = {
-  "transport-belt",
-  "underground-belt",
-  "splitter",
-  "fast-transport-belt",
-  "fast-underground-belt",
-  "fast-splitter",
-  "express-transport-belt",
-  "express-splitter",
-  "express-underground-belt",
-  "turbo-transport-belt",
-  "turbo-splitter",
-  "turbo-underground-belt",
+local casting_dict = {
+  ["transport-belt"] = "metallurgy",
+  ["underground-belt"] = "metallurgy",
+  ["splitter"] = "metallurgy",
+  ["fast-transport-belt"] = "metallurgy",
+  ["fast-underground-belt"] = "metallurgy",
+  ["fast-splitter"] = "metallurgy",
+  ["express-transport-belt"] = "metallurgy",
+  ["express-splitter"] = "metallurgy",
+  ["express-underground-belt"] = "metallurgy",
+  ["turbo-transport-belt"] = "metallurgy",
+  ["turbo-splitter"] = "metallurgy",
+  ["turbo-underground-belt"] = "metallurgy",
 
-  "steam-engine",
-  "heat-exchanger",
-  "heat-pipe",
-  "steam-turbine",
+  ["steam-engine"] = "metallurgy",
+  ["heat-exchanger"] = "metallurgy",
+  ["heat-pipe"] = "metallurgy",
+  ["steam-turbine"] = "metallurgy",
 
-  "solar-panel",
-  "steel-furnace",
-  "steel-chest",
-  "iron-chest",
-  -- "coal-liquefaction", -- should be blacklisted by category
-  -- "plastic-bar", -- blacklisted by item and/or category
-  -- "solid-fuel-from-light-oil", -- blacklisted by ingredients
-  "tungsten-space-platform-foundation",
+  ["solar-panel"] = "metallurgy",
+  ["steel-furnace"] = "metallurgy",
+  ["steel-chest"] = "metallurgy",
+  ["iron-chest"] = "metallurgy",
+  -- ["coal-liquefaction"] = "oil-refining", -- should be blacklisted by category
+  -- ["plastic-bar"] = "chemistry", -- blacklisted by item and/or category
+  -- ["solid-fuel-from-light-oil"] = "crafting-with-fluid", -- blacklisted by ingredients
+  ["tungsten-space-platform-foundation"] = "metallurgy",
 
-  "car",
-  "tank",
-  -- extend as needed
+  ["car"] = "metallurgy",
+  ["tank"] = "metallurgy",
 }
-batch_generator(casting_list)
+batch_generator(casting_dict)

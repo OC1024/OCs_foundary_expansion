@@ -71,12 +71,12 @@ if category_blacklist then
 end
 
 -- 2. Execute the Generator. The most crucial part of the compatibility file. Note: this will produce recipes with the name "casting-item-name-1"
-local casting_list = {
-    "item-name-1",
-    "item-name-2",
+local casting_dict = {
+    ["item-name-1"] = "metallurgy",
+    ["item-name-2"] = "chemistry",
     -- more Items
 }
-batch_generator(casting_list)
+batch_generator(casting_dict)
 
 -- 3. Add Recipes to Techs
 local recipe_tech_mapping = {
