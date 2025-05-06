@@ -76,7 +76,7 @@ local casting_list = {
     "item-name-2",
     -- more Items
 }
-batch_generate_castings(casting_list)
+batch_generator(casting_list)
 
 -- 3. Add Recipes to Techs
 local recipe_tech_mapping = {

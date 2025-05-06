@@ -8,7 +8,7 @@ data:extend({
   { -- advanced foundry
   type = "item",
   name = "advanced-foundry",
-  icon = "__OCs_core_extraction__/graphics/icons/advanced-foundry-icon.png", -- advanced foundry by Hurricane
+  icon = "__OCs_foundary_expansion__/graphics/icons/advanced-foundry-icon.png", -- advanced foundry by Hurricane
   icon_size = 64, --icon_mipmaps = 4,
   group = "production",
   subgroup = "smelting-machine",

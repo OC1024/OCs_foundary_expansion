@@ -25,7 +25,9 @@ Order:
 3. technologies
 4. bug-fixing
 
-divide liquid use by amout of recipe.result such that eg. fast-underground-trasport-belt wich uses 5 of 10 transport-belt as ingredient
-make auto-blacklist by category instead of list of recipes defined as in category
-make the convetor can only heat fragments and not smelt anything
-introducing a "transport-belt" liquid just to adore my error and to fuck up any player including myself.
+introducing a "transport-belt" liquid just to adore my error and to fuck up any player including myself. joke
+
+make (batch)-generator take the crafting "category" as input such that non-casting recipes can be hanlded. 
+eg. molten-plastics for chemistry or circuits for electromagnetic
+
+compatibility with every mod which makes steel using coal/carbon: heavy armor plate then does need normal steel and not the carbon

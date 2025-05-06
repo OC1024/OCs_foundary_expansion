@@ -7,7 +7,7 @@ data:extend({
   { --  advanced foundry
     type = "technology",
     name = "advanced-foundry-tech",
-    icon = "__OCs_core_extraction__/graphics/technology/advanced-foundry-tech.png", -- advanced foundry by Hurricane
+    icon = "__OCs_foundary_expansion__/graphics/technology/advanced-foundry-tech.png", -- advanced foundry by Hurricane
 		icon_size = 256, --icon_mipmaps = 4,
     prerequisites = prerequ,
     unit = {

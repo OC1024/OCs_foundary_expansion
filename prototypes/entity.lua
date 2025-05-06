@@ -9,7 +9,7 @@ data:extend({
     group = "production",
     subgroup = "smelting-machine",
     order = "d[foundry]-a",
-    icon = "__OCs_core_extraction__/graphics/icons/advanced-foundry-icon.png", -- by Hurricane
+    icon = "__OCs_foundary_expansion__/graphics/icons/advanced-foundry-icon.png", -- by Hurricane
     icon_size = 64,
     icon_draw_specification = {scale = 2.5, shift = {0, 0}},
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
@@ -42,19 +42,19 @@ data:extend({
             -- scale = 0.5, -- activate if high resolution
             stripes = {
               {
-                filename = "__OCs_core_extraction__/graphics/entity/advanced-foundry-sr-animation-1.png",
+                filename = "__OCs_foundary_expansion__/graphics/entity/advanced-foundry-sr-animation-1.png",
                 width_in_frames = 8,
                 height_in_frames = 8,
               },
               {
-                filename = "__OCs_core_extraction__/graphics/entity/advanced-foundry-sr-animation-2.png",
+                filename = "__OCs_foundary_expansion__/graphics/entity/advanced-foundry-sr-animation-2.png",
                 width_in_frames = 8,
                 height_in_frames = 7,
               },
             },
           },
           {
-            filename = "__OCs_core_extraction__/graphics/entity/advanced-foundry-sr-shadow.png",
+            filename = "__OCs_foundary_expansion__/graphics/entity/advanced-foundry-sr-shadow.png",
             priority = "high",
             width = 900/2,
             height = 800/2,
@@ -82,12 +82,12 @@ data:extend({
             blend_mode = "additive",
             stripes = {
               {
-                filename = "__OCs_core_extraction__/graphics/entity/advanced-foundry-sr-emission-1.png",
+                filename = "__OCs_foundary_expansion__/graphics/entity/advanced-foundry-sr-emission-1.png",
                 width_in_frames = 8,
                 height_in_frames = 8,
               },
               {
-                filename = "__OCs_core_extraction__/graphics/entity/advanced-foundry-sr-emission-2.png",
+                filename = "__OCs_foundary_expansion__/graphics/entity/advanced-foundry-sr-emission-2.png",
                 width_in_frames = 8,
                 height_in_frames = 7,
               },

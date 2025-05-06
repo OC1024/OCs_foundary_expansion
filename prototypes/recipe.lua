@@ -218,6 +218,60 @@ data:extend({ -- casting vanilla recipes
   --     {type = "item", name = "fast-underground-belt", amount = 2}
   --   }
   -- },
+  { -- foundry lithium plate
+    type = "recipe",
+    name = "forging-lithium-plate",
+    icons =
+    {
+      {
+        icon = "__space-age__/graphics/icons/lithium-plate.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+      -- {
+      --   icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-molten-iron.png",
+      --   icon_size = 64,
+      --   icon_mipmaps = 4,
+      -- }
+    },
+    category = "metallurgy",
+    enabled = false,
+    energy_required = 6.4,
+    ingredients = {
+      {type = "item", name = "lithium", amount = 1},
+    },
+    results = {
+      {type = "item", name = "lithium-plate", amount = 1}
+    }
+  },
+  -- { -- casting lithium plate
+  --   type = "recipe",
+  --   name = "casting-lithium-plate",
+  --   icons =
+  --   {
+  --     {
+  --       icon = "__space-age__/graphics/icons/lithium-plate.png",
+  --       icon_size = 64,
+  --       icon_mipmaps = 4,
+  --     },
+  --     {
+  --       icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-molten-iron.png",
+  --       icon_size = 64,
+  --       icon_mipmaps = 4,
+  --     }
+  --   },
+  --   category = "metallurgy",
+  --   enabled = false,
+  --   energy_required = 6.4*5+20,
+  --   ingredients = {
+  --     {type = "fluid", name = "lithium-brine", amount = 50},
+  --     {type = "fluid", name = "ammonia", amount = 50},
+  --     {type = "item", name = "holmium-plate", amount = 1},
+  --   },
+  --   results = {
+  --     {type = "item", name = "lithium-plate", amount = 5}
+  --   }
+  -- },
 })
 
 data:extend({
@@ -290,7 +344,7 @@ data:extend({ -- buildings
   subgroup = "smelting-machine",
   order = "d[foundry]-a",
   -- order = "z-c",
-  icon = "__OCs_core_extraction__/graphics/icons/advanced-foundry-icon.png",
+  icon = "__OCs_foundary_expansion__/graphics/icons/advanced-foundry-icon.png",
   icon_size = 64, -- icon_mipmaps = 4
   enabled = false,
   energy_required = 30,

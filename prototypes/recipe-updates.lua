@@ -25,11 +25,10 @@ local casting_list = {
   -- "coal-liquefaction", -- should be blacklisted by category
   -- "plastic-bar", -- blacklisted by item and/or category
   -- "solid-fuel-from-light-oil", -- blacklisted by ingredients
-  -- "tungsten-carbide", -- all inputs are blacklisted or native liquid
   "tungsten-space-platform-foundation",
 
   "car",
   "tank",
   -- extend as needed
 }
-batch_generate_castings(casting_list)
+batch_generator(casting_list)
