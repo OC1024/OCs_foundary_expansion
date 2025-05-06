@@ -1,38 +1,31 @@
-
-require("__OCs_base_assets__.prototypes.utils.casting-generator")
--- casting.generate_casting_from_recipe(casting.casting_materials)
--- generate_casting_from_recipe(data.raw.recipe["transport-belt"])
--- generate_casting_from_recipe(data.raw.recipe["fast-transport-belt"])
-
-
 data:extend({ -- casting vanilla recipes
-  { -- casting rails
-    type = "recipe",
-    name = "casting-rail",
-    icons =
-    {
-      {
-        icon = "__base__/graphics/icons/rail.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-molten-iron.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-      }
-    },
-    category = "metallurgy",
-    enabled = false,
-    energy_required = 0.5,
-    ingredients = {
-      {type = "fluid", name = "molten-iron", amount = 35}, -- 30*1steel-plate + 5*1iron-stick
-      {type = "fluid", name = "lava", amount = 10}, -- 10*1 stone
-    },
-    results = {
-      {type = "item", name = "rail", amount = 2}
-    }
-  },
+  -- { -- casting rails
+  --   type = "recipe",
+  --   name = "casting-rail",
+  --   icons =
+  --   {
+  --     {
+  --       icon = "__base__/graphics/icons/rail.png",
+  --       icon_size = 64,
+  --       icon_mipmaps = 4,
+  --     },
+  --     {
+  --       icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-molten-iron.png",
+  --       icon_size = 64,
+  --       icon_mipmaps = 4,
+  --     }
+  --   },
+  --   category = "metallurgy",
+  --   enabled = false,
+  --   energy_required = 0.5,
+  --   ingredients = {
+  --     {type = "fluid", name = "molten-iron", amount = 35}, -- 30*1steel-plate + 5*1iron-stick
+  --     {type = "fluid", name = "lava", amount = 10}, -- 10*1 stone
+  --   },
+  --   results = {
+  --     {type = "item", name = "rail", amount = 2}
+  --   }
+  -- },
   -- { -- casting heat pipe
   --   type = "recipe",
   --   name = "casting-heat-pipe",

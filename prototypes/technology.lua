@@ -50,15 +50,15 @@ data:extend({
 -- }
 -- add_recipe_unlocks(recipe_unlocks)
 
--- add casting rails to the stone-casting tech from my other mod
-if mods["OCs_stone_casting"] and data.raw["technology"]["lava-to-stone-tech"] then
-  local recipe_unlocks = {
-    ["casting-rail"] = {"lava-to-stone-tech"}
-  }
-  add_recipe_unlocks(recipe_unlocks)
-else -- should not be the case because of dependencies, vanilla fallback
-  local recipe_unlocks = {
-    ["casting-rail"] = {"railway"}
-  }
-  add_recipe_unlocks(recipe_unlocks)
-end
+-- -- add casting rails to the stone-casting tech from my other mod
+-- if mods["OCs_stone_casting"] and data.raw["technology"]["lava-to-stone-tech"] then
+--   local recipe_unlocks = {
+--     ["casting-rail"] = {"lava-to-stone-tech"}
+--   }
+--   add_recipe_unlocks(recipe_unlocks)
+-- else -- should not be the case because of dependencies, vanilla fallback
+--   local recipe_unlocks = {
+--     ["casting-rail"] = {"railway"}
+--   }
+--   add_recipe_unlocks(recipe_unlocks)
+-- end
