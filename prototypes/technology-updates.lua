@@ -1,6 +1,9 @@
 
 -- add casting (item) to the (tech)
 local recipe_unlocks = {
+    ["casting-underground-pipe"] = {"foundry"},
+    ["casting-pump"] = {"fluid-handling"},
+    ["casting-storage-tank"] = {"fluid-handling"},
     ["casting-steam-engine"] = {"foundry"},
     ["casting-heat-pipe"] = {"nuclear-power","heating-tower"},
     ["casting-heat-exchanger"] = {"nuclear-power","heating-tower"},
@@ -8,6 +11,7 @@ local recipe_unlocks = {
 
     ["casting-iron-chest"] = {"foundry"},
     ["casting-steel-chest"] = {"foundry"},
+    ["casting-barrel"] = {"fluid-handling"},
 
     ["casting-solar-panel"] = {"solar-energy"},
 

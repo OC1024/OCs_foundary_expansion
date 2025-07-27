@@ -10,7 +10,7 @@
     "space-age",
     "OCs_base_assets >= 0.2.0",
     "OCs_alt_sciences",
-    "OCs_ammo_casting",
+    "OCs_ammo_casting >= 0.7.0",
     "OCs_stone_casting",
     "? OCs_core_extraction",
     "? foundry-expanded",

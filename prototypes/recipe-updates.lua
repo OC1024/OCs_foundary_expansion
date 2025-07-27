@@ -1,5 +1,6 @@
 -- used for testing the casting-generator
 local casting_dict = {
+  -- basic transporotation 
   ["transport-belt"] = "metallurgy",
   ["underground-belt"] = "metallurgy",
   ["splitter"] = "metallurgy",
@@ -12,12 +13,16 @@ local casting_dict = {
   ["turbo-transport-belt"] = "metallurgy",
   ["turbo-splitter"] = "metallurgy",
   ["turbo-underground-belt"] = "metallurgy",
-
+  -- fluid handling
+  ["pump"] = "metallurgy",
+  ["storage-tank"] = "metallurgy",
+  ["barrel"] = "metallurgy",
+  -- heating
   ["steam-engine"] = "metallurgy",
   ["heat-exchanger"] = "metallurgy",
   ["heat-pipe"] = "metallurgy",
   ["steam-turbine"] = "metallurgy",
-
+  -- buildings
   ["solar-panel"] = "metallurgy",
   ["steel-furnace"] = "metallurgy",
   ["steel-chest"] = "metallurgy",

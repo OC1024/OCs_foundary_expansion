@@ -325,6 +325,9 @@ data:extend({
     results = {
       {type = "item", name = "space-platform-foundation", amount = 2}
     },
+    allow_decomposition = false,
+    allow_productivity = false,
+    auto_recycle = false,
   },
 })
 
