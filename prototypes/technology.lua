@@ -31,34 +31,42 @@ data:extend({
   },
 })
 
--- -- add casting (item) to the (tech)
--- local recipe_unlocks = {
---   ["casting-heat-pipe"] = {"nuclear-power","heating-tower"},
---   ["casting-heat-exchanger"] = {"nuclear-power","heating-tower"},
---   ["casting-steam-turbine"] = {"nuclear-power","heating-tower"},
---   ["casting-steel-chest"] = {"steel-processing"},
---   ["casting-iron-chest"] = {"foundry"},
---   -- ["casting-stone-furnace"] = {"advanced-material-processing"}, -- stone casting mod
---   -- ["casting-steel-furnace"] = {"advanced-material-processing"}, -- stone casting mod
---   ["casting-solar-panel"] = {"solar-energy"},
---   ["casting-transport-belt"] = {"logistics"},
---   ["casting-underground-belt"] = {"logistics"},
---   ["casting-fast-transport-belt"] = {"logistics-2"},
---   ["casting-fast-underground-belt"] = {"logistics-2"},
---   -- ["lds-space-platform-foundation"] = {"rocket-silo"},
---   ["tungsten-space-platform-foundation"] = {"rocket-silo"},
--- }
--- add_recipe_unlocks(recipe_unlocks)
+-- add casting (item) to the tech (or multiple ones)
+local recipe_unlocks = {
+    ["casting-offshore-pump"] = {"foundry"},
+    ["casting-pump"] = {"fluid-handling"},
+    ["casting-storage-tank"] = {"fluid-handling"},
+    ["casting-steam-engine"] = {"foundry"},
+    ["casting-heat-pipe"] = {"nuclear-power","heating-tower"},
+    ["casting-heat-exchanger"] = {"nuclear-power","heating-tower"},
+    ["casting-steam-turbine"] = {"nuclear-power","heating-tower"},
+    ["casting-boiler"] = {"foundry"},
+    ["casting-heating-tower"] = {"heating-tower"},
 
--- -- add casting rails to the stone-casting tech from my other mod
--- if mods["OCs_stone_casting"] and data.raw["technology"]["lava-to-stone-tech"] then
---   local recipe_unlocks = {
---     ["casting-rail"] = {"lava-to-stone-tech"}
---   }
---   add_recipe_unlocks(recipe_unlocks)
--- else -- should not be the case because of dependencies, vanilla fallback
---   local recipe_unlocks = {
---     ["casting-rail"] = {"railway"}
---   }
---   add_recipe_unlocks(recipe_unlocks)
--- end
+    ["casting-iron-chest"] = {"foundry"},
+    ["casting-steel-chest"] = {"foundry"},
+    ["casting-barrel"] = {"fluid-handling"},
+
+    ["casting-solar-panel"] = {"solar-energy"},
+
+    ["casting-transport-belt"] = {"logistics"},
+    ["casting-underground-belt"] = {"logistics"},
+    ["casting-splitter"] = {"logistics"},
+    ["casting-fast-transport-belt"] = {"logistics-2"},
+    ["casting-fast-underground-belt"] = {"logistics-2"},
+    ["casting-fast-splitter"] = {"logistics-2"},
+    ["casting-express-transport-belt"] = {"logistics-3"},
+    ["casting-express-underground-belt"] = {"logistics-3"},
+    ["casting-express-splitter"] = {"logistics-3"},
+    ["casting-turbo-transport-belt"] = {"turbo-transport-belt"},
+    ["casting-turbo-underground-belt"] = {"turbo-transport-belt"},
+    ["casting-turbo-splitter"] = {"turbo-transport-belt"},
+
+    -- ["lds-space-platform-foundation"] = {"rocket-silo"},
+    ["tungsten-space-platform-foundation"] = {"rocket-silo"},
+    ["casting-tungsten-space-platform-foundation"] = {"rocket-silo"},
+
+    ["casting-car"] = {"automobilism"},
+    ["casting-tank"] = {"tank"},
+}
+add_recipe_unlocks(recipe_unlocks)

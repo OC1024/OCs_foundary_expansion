@@ -8,12 +8,15 @@
   "dependencies": [
     "base >= 2.0",
     "space-age",
-    "OCs_base_assets >= 0.2.0",
+    "OCs_base_assets >= 0.3.0",
     "OCs_alt_sciences",
     "OCs_ammo_casting >= 0.7.0",
     "OCs_stone_casting",
     "? OCs_core_extraction",
     "? foundry-expanded",
-    "? electromagnetic-plant-expanded"
+    "? electromagnetic-plant-expanded",
+    "? aai-containters >=0.3.1",
+    "? aai-industry >= 0.6.0",
+    "? Krastorio2-spaced-out >= 1.4.0"
   ]
 }

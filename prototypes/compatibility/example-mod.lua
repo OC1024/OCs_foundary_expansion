@@ -1,84 +1,71 @@
 -- === Example Strukture for a compat-file ===
+-- pepare the generator
+local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
+
 
 -- 1. Preparations: Edit all Tables
-if casting_materials then
-    -- Add/Change Materials from the casting_materials table
-    local additions = {
-        ["item-name-1"] = { fluid = "lava", ratio = 8, energy_required = 2.5 },
-        ["item-name-2"] = { fluid = "lava", ratio = 12, energy_required = 3.0 },
+-- 1.1 Alternative Recipes
+-- 1.1.1 Single Item
+generator_api.register_single_alt_recipe("metallurgy","item-name",{"alt-recipe","standard-require"})
+
+-- 1.1.2 Single target category
+local alt_recipes_table = {
+    ["item-name-1"] = {"best-alt-recipe","standard-recipe","bad-alt-recipe"},
+    ["item-name-5"] = {"alternative-recipe-5","standard-recipe-5"},
+}
+generator_api.register_category_alt_recipes("metallurgy", alt_recipes_table)
+
+-- 1.1.3 Multiple categories
+local multi_cat_table = {
+    metallurgy = {
+        ["item-x"] = {"alt-x1", "alt-x2"},
+        ["item-y"] = {"alt-y1", "std-y"},
+    },
+    electromagnetics = {
+        ["item-a"] = {"alt-a", "std-a"},
+        ["item-b"] = {"alt-b"},
     }
-    for name, props in pairs(additions) do
-        casting_materials[name] = props
-    end
+}
+generator_api.register_multi_category_alt_recipes(multi_cat_table)
 
-    -- Remove Materials from the casting_materials table
-    local removals = {
-        "item-name-3",
-        "item-name-4",
-    }
-    for _, name in ipairs(removals) do
-        casting_materials[name] = nil
-    end
+-- 1.2 Blacklists
+-- 1.2.1 Single Category, Items
+local blacklist_items = {
+    "bad-item-1",
+    "bad-item-2",
+}
+generator_api.register_item_blacklist("metallurgy", blacklist_items)
 
-    -- log the new version of the casting_materials table
-    local keys = {}
-    for k in pairs(casting_materials) do table.insert(keys, k) end
-    table.sort(keys)
-    debug_log("Current casting_materials: " .. table.concat(keys, ", "),"generator")
+-- 1.2.2 Multiple Categories, Items
+local multi_item_blacklists = {
+    ["metallurgy"] = {"bad-item-3", "bad-item-4"},
+    ["chemistry"]  = {"toxic-item-1", "toxic-item-2"},
+}
+generator_api.register_multi_item_blacklists(multi_item_blacklists)
 
-end
+-- 1.2.3 Single Category, Categories
+local blacklist_categories = {
+    "bad-category-1",
+    "bad-category-2",
+}
+generator_api.register_category_blacklist("metallurgy", blacklist_categories)
 
-if alternative_recipes then
-    -- Add/Change order of Alternative Receptes
-    local alternatives = {
-        ["item-name-1"] = {"alternative-recipe-1","standard-recipe","bad-alt-recipe-2"},
-        ["item-name-5"] = {"alternative-recipe-2"},
-    }
-    for name, alt_list in pairs(alternatives) do
-        alternative_recipes[name] = alt_list
-    end
+-- 1.2.4 Multiple Categories, Categories
+local multi_category_blacklists = {
+    ["metallurgy"] = {"restricted-cat-1", "restricted-cat-2"},
+    ["smelting"]   = {"blocked-cat-1", "blocked-cat-2"},
+}
+generator_api.register_multi_category_blacklists(multi_category_blacklists)
 
-    -- To remove alternative recipes entirely
-    local remove_alternatives = {
-        "item-name-3",
-        "item-name-6",
-    }
-    for _, name in ipairs(remove_alternatives) do
-        alternative_recipes[name] = nil
-    end
-end
-
-if casting_blacklist then
-    -- Block single Items
-    local blacklist_items = {
-      ["bad-item-1"] = true,
-      ["bad-item-2"] = true,
-    }
-    for name, _ in pairs(blacklist_items) do
-      casting_blacklist[name] = true
-    end
-end
-
-if category_blacklist then
-    -- Block complete Categories
-    local blacklist_categories = {
-      ["category-1"] = true,
-      ["category-2"] = true,
-    }
-    for name, _ in pairs(blacklist_categories) do
-      category_blacklist[name] = true
-    end
-end
-
--- 2. Execute the Generator. The most crucial part of the compatibility file. Note: this will produce recipes with the name "casting-item-name-1"
+-- 2. Execute the Generator. The most crucial part of the compatibility file. Note: this will produce recipes with the name "prefix-item-name-1"
 local casting_dict = {
     ["item-name-1"] = "metallurgy",
     ["item-name-2"] = "chemistry",
-    -- more Items
+    ["item-name-3"] = "organic",
 }
-batch_generator(casting_dict)
+generator_api.batch_generator(casting_dict)
 
--- 3. Add Recipes to Techs
+-- 3. Add Recipes to Techs (note just helper, not generator)
 local recipe_tech_mapping = {
     ["casting-item-name-1"] = {"technology-name-1","tech-name-3"},
     ["casting-item-name-2"] = {"technology-name-2"},

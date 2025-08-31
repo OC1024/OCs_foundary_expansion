@@ -1,12 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.3
-Date: 2025-05-08
+Date: 2025-08-29
   Minor Features:
     - Reintroducing the advanced foundry to this mod. Temporarily was in the OCs_core_extraction mod. (depricated mod)
     - Added few more recipes to the foundry.
     - Added a research speed tech with promethium science, parallel to the lab prod tech. (not yet implemented)
+  Compatibility:
+    - Started compatibility with Kastorio 2 mod. Adding some casting materials and recipes.
+  Changes:
+    - Updated dependency to OCs_base_assets 0.3.0
   Other:
-    - Updated dependency of my base mod.
     - German localisation now has different word order.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
