@@ -1,25 +1,30 @@
 data:extend({
     -- {
-    --     type = "bool-setting",
-    --     name = "allow-heavy-military-tech",
+    --     type = "int-setting",
+    --     name = "science-productivity-max-level",
     --     setting_type = "startup",
-    --     default_value = false,
-    --     order = "b"
+    --     default_value = -1,
+    --     minimum_value = -1,
+    --     maximum_value = 1024, -- easteregg
+    --     order = "c-a"
+    -- },
+    -- {
+    --     type = "bool-setting",
+    --     name = "allow-planetary-sci-productivity",
+    --     setting_type = "startup",
+    --     default_value = true,
+    --     order = "c-b"
     -- },
     {
-        type = "int-setting",
-        name = "science-productivity-max-level",
+        type = "bool-setting",
+        name = "aai_storage_evolution",
         setting_type = "startup",
-        default_value = -1,
-        minimum_value = -1,
-        maximum_value = 1024, -- easteregg
-        order = "c-a"
+        default_value = true, -- later set to false
     },
     {
         type = "bool-setting",
-        name = "allow-planetary-sci-productivity",
+        name = "notnotmellons_factorissimo_evolution",
         setting_type = "startup",
-        default_value = true,
-        order = "c-b"
+        default_value = true, -- later set to false
     },
 })

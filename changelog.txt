@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.4.3
+Version: 0.5.0
 Date: 2025-08-29
   Minor Features:
     - Reintroducing the advanced foundry to this mod. Temporarily was in the OCs_core_extraction mod. (depricated mod)
@@ -7,8 +7,12 @@ Date: 2025-08-29
     - Added a research speed tech with promethium science, parallel to the lab prod tech. (not yet implemented)
   Compatibility:
     - Started compatibility with Kastorio 2 mod. Adding some casting materials and recipes.
+    - Added combatibility with aai-containers. Optional make them evolutionary.
+    - Added combatibility with notnotmellons Factorissimo mod. Optional make the factory buildings evolutionary.
   Changes:
     - Updated dependency to OCs_base_assets 0.3.0
+    - Updated dependency to OCs_ammo_casting 0.8.0
+    - Updated dependency to OCs_stone_casting 0.8.0 which uses the base mod as above.
   Other:
     - German localisation now has different word order.
 ---------------------------------------------------------------------------------------------------
