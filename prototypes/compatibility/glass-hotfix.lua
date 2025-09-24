@@ -27,6 +27,6 @@ for _, recipe in pairs(data.raw.recipe) do
 end
 
 -- optional: hide the unusable item
-if data.raw.item["glass"] then
+if data.raw.item["glass"] and data.raw.item["kr-glass"] then
   data.raw.item["glass"].hidden = true
 end

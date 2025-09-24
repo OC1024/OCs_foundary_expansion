@@ -395,10 +395,10 @@ local new_recipes_dict = {
   ["steam-turbine"] = "metallurgy",
   ["boiler"] = "metallurgy",
   -- buildings
-  ["solar-panel"] = "metallurgy",
+  ["solar-panel"] = "metallurgy", -- factorio says that is electronics so casting is forbidden due to blacklist_category
   ["steel-furnace"] = "metallurgy",
-  ["steel-chest"] = "metallurgy",
   ["iron-chest"] = "metallurgy",
+  ["steel-chest"] = "metallurgy",
   -- ["coal-liquefaction"] = "oil-refining", -- should be blacklisted by category
   -- ["plastic-bar"] = "chemistry", -- blacklisted by item and/or category
   -- ["solid-fuel-from-light-oil"] = "crafting-with-fluid", -- blacklisted by ingredients

@@ -1,3 +1,6 @@
+
+data.raw["recipe"]["kr-automation-core"].category = "metallurgy-or-assembling" -- making it castable and not craftable in the EM plant
+
 -- 0. load API
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
 
@@ -86,14 +89,14 @@ generator_api.register_category_blacklist("metallurgy", blacklist_categories)
 -- 2. Execute the Generator.
 local casting_dict = {
     -- ["kr-iron-gear"] = "metallurgy",
-    ["kr-blank-tech-card"] = "metallurgy",
-    ["kr-automation-core"] = "metallurgy",
+    ["kr-blank-tech-card"] = "metallurgy", -- category: electronics
+    ["kr-automation-core"] = "metallurgy", -- category: electronics
     ["kr-empty-dt-fuel-cell"] = "metallurgy",
     -- imersium intermetiates
     ["kr-imersium-plate"] = "metallurgy",
     ["kr-imersium-beam"] = "metallurgy",
     ["kr-imersium-gear-wheel"] = "metallurgy",
-    -- kr-logistics-5 (purple belts)
+    -- kr-logistic-5 (purple belts)
     ["kr-superior-transport-belt"] = "metallurgy",
     ["kr-superior-underground-belt"] = "metallurgy",
     ["kr-superior-splitter"] = "metallurgy",
@@ -108,11 +111,11 @@ local recipe_tech_mapping = {
     -- imersium intermediates
     ["casting-kr-imersium-beam"] = {"kr-imersium-processing"},
     ["casting-kr-imersium-gear-wheel"] = {"kr-imersium-processing"},
-    -- kr-logistics-5 (purple belts)
-    ["casting-kr-empty-dt-fuel-cell"] = {"kr-fusion-energy"},
-    ["casting-kr-superior-transport-belt"] = {"kr-logistics-5"},
-    ["casting-kr-superior-underground-belt"] = {"kr-logistics-5"},
-    ["casting-kr-superior-splitter"] = {"kr-logistics-5"},
+    -- kr-logistic-5 (purple belts)
+    ["casting-kr-empty-dt-fuel-cell"] = {"kr-fusion-energy"}, -- ins't that to high-tech?
+    ["casting-kr-superior-transport-belt"] = {"kr-logistic-5"},
+    ["casting-kr-superior-underground-belt"] = {"kr-logistic-5"},
+    ["casting-kr-superior-splitter"] = {"kr-logistic-5"},
 }
 add_recipe_unlocks(recipe_tech_mapping)
 
