@@ -13,8 +13,6 @@
     "OCs_ammo_casting >= 0.8.0",
     "OCs_stone_casting >=0.8.0",
     "? OCs_core_extraction",
-    "? foundry-expanded",
-    "? electromagnetic-plant-expanded",
     "? aai-containters >=0.3.1",
     "? aai-industry >= 0.6.0",
     "? Krastorio2-spaced-out >= 1.4.0"

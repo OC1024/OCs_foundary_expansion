@@ -1,7 +1,7 @@
 
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
 -- [[
-if settings["aai_storage_evolution"].value then
+if settings.startup["notnotmellons_factorissimo_evolution"].value then
   -- change the standard recipes to an evolution. the casting will be changed automatically
   -- vanilla version is overwritten to medium artillery shell
   -- if data.raw["recipe"]["factory-1"] then
@@ -13,16 +13,16 @@ if settings["aai_storage_evolution"].value then
   -- end
   if data.raw["recipe"]["factory-2"] then
     data.raw["recipe"]["factory-2"].ingredients = {
-      {type = "item", name = "stone-brick",       amount = 1000},
-      {type = "item", name = "steel-plate",       amount = 250},
+      {type = "item", name = "stone-brick",       amount = 500}, -- 1000
+      {type = "item", name = "steel-plate",       amount = 150}, -- 250
       {type = "item", name = "big-electric-pole", amount = 50},
       {type = "item", name = "factory-1",         amount = 1}
     }
   end
   if data.raw["recipe"]["factory-3"] then
     data.raw["recipe"]["factory-3"].ingredients = {
-      {type = "item", name = "concrete",    amount = 5000},
-      {type = "item", name = "steel-plate", amount = 2000},
+      {type = "item", name = "concrete",    amount = 1000}, -- 5000
+      {type = "item", name = "tungsten-plate", amount = 1000}, -- 2000
       {type = "item", name = "substation",  amount = 100},
       {type = "item", name = "factory-2",   amount = 1},
     }

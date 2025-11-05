@@ -14,19 +14,23 @@ data:extend({
     icon_draw_specification = {scale = 2.5, shift = {0, 0}},
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1.0, result = "advanced-foundry"},
-    max_health = 640,
+    fast_replaceable_group = "advanced-foundry",
+    max_health = 640, -- 350 for normal foundry
     corpse = "foundry-remnants",
     dying_explosion = "foundry-explosion",
-    collision_box = {{-3.7, -3.7}, {3.7, 3.7}}, -- 8x8 building
-    selection_box = {{-4, -4}, {4, 4}},
+    collision_box = {{-3.25, -3.25}, {3.25, 3.25}}, -- 7x7 building
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    -- collision_box = {{-3.7, -3.7}, {3.7, 3.7}}, -- 8x8 building
+    -- selection_box = {{-4, -4}, {4, 4}},
     crafting_categories = {"metallurgy", "crafting-with-fluid-or-metallurgy", "metallurgy-or-assembling"}, -- no pressing
-    crafting_speed = 8,
+    crafting_speed = 8, -- 4 for normal foundry
     energy_source = {
         type = "electric",
         usage_priority = "secondary-input",
         emissions_per_minute = { pollution = 16 },-- 6 for normal foundry
     },
     energy_usage = "8MW", -- 2.5MW for normal foundry
+    heating_energy = "400kW", -- 300kW for normal foundry
     ingredient_count = 6, -- Maximum number of ingredients for recipes
     graphics_set = -- graphics by Hurricane
     {
@@ -39,7 +43,7 @@ data:extend({
             height = 530/2,
             frame_count = 120,
             animation_speed = 0.05,
-            -- scale = 0.5, -- activate if high resolution
+            scale = 7/8, -- for 7x7 instead of the 8x8 buidling
             stripes = {
               {
                 filename = "__OCs_foundary_expansion__/graphics/entity/advanced-foundry-sr-animation-1.png",
@@ -62,7 +66,7 @@ data:extend({
             repeat_count = 120,
             animation_speed = 0.05,
             draw_as_shadow = true,
-            -- scale = 0.5, -- activate if high resolution
+            scale = 7/8, -- for 7x7 instead of the 8x8 buidling
           },
         },
       },
@@ -77,7 +81,7 @@ data:extend({
           shift = {0, 0},
             frame_count = 120,
             animation_speed = 0.05,
-            -- scale = 0.5, -- activate if high resolution
+            scale = 7/8, -- for 7x7 instead of the 8x8 buidling
             draw_as_light = true,
             blend_mode = "additive",
             stripes = {
@@ -131,7 +135,7 @@ data:extend({
         -- enable_working_visualisations = { "input-pipe" },
         volume = 1000,
         render_layer = "lower-object-above-shadow",
-        pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {-1.5, 3.5} }}
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {0, 3} }}
       },
       {
         production_type = "input",
@@ -141,7 +145,17 @@ data:extend({
         -- enable_working_visualisations = { "input-pipe" },
         volume = 1000,
         render_layer = "lower-object-above-shadow",
-        pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {1.5, 3.5} }}
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {2, 3} }}
+      },
+      {
+        production_type = "input",
+        pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
+        pipe_covers = pipecoverspictures(),
+        always_draw_covers = false,
+        -- enable_working_visualisations = { "input-pipe" },
+        volume = 1000,
+        render_layer = "lower-object-above-shadow",
+        pipe_connections = {{ flow_direction="input", direction = defines.direction.south, position = {-2, 3} }}
       },
       {
         production_type = "output",
@@ -151,7 +165,7 @@ data:extend({
         -- enable_working_visualisations = { "output-pipe" },
         volume = 100,
         render_layer = "lower-object-above-shadow",
-        pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {-1.5, -3.5} }}
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {0, -3} }}
       },
       {
         production_type = "output",
@@ -161,7 +175,17 @@ data:extend({
         -- enable_working_visualisations = { "output-pipe" },
         volume = 100,
         render_layer = "lower-object-above-shadow",
-        pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {1.5, -3.5} }}
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {2, -3} }}
+      },
+      {
+        production_type = "output",
+        pipe_picture = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").pipe_pictures,
+        pipe_covers = pipecoverspictures(),
+        always_draw_covers = false,
+        -- enable_working_visualisations = { "output-pipe" },
+        volume = 100,
+        render_layer = "lower-object-above-shadow",
+        pipe_connections = {{ flow_direction="output", direction = defines.direction.north, position = {-2, -3} }}
       }
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
@@ -170,3 +194,11 @@ data:extend({
     effect_receiver = { base_effect = { productivity = 0.75 }},
   },
 })
+if data.raw["recipe-category"]["metallurgy-or-quality-assembling"] then
+  table.insert(crafting_categories, "metallurgy-or-quality-assembling")
+  log("crafting_categories updated with 'metallurgy-or-quality-assembling'. IDK wich mod it was")
+end
+if data.raw["recipe-category"]["metallurgy-or-assembling-or-quality-assembling"] then
+  table.insert(crafting_categories, "metallurgy-or-assembling-or-quality-assembling")
+  log("crafting_categories updated with 'metallurgy-or-assembling-or-quality-assembling'. IDK wich mod it was")
+end

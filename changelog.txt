@@ -1,18 +1,26 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.0
-Date: 2025-09-24
+Date: 2025-11-05
   Minor Features:
     - Reintroducing the advanced foundry to this mod. Temporarily was in the OCs_core_extraction mod. (depricated mod)
+      Advanced foundry standard import planet is Vulcanus, where it can be produced. It is also a 7x7 building, instead of 8x8.
+      Optionally, earlier without cryogenetic science pack.
     - Added few more recipes to the foundry.
     - Added a research speed tech with promethium science, parallel to the lab prod tech. (not yet implemented)
+    - Added way more recipes for vanilla, K2, aai-industry
   Compatibility:
     - Started compatibility with Kastorio 2 mod. Adding some casting materials and recipes.
     - Added combatibility with aai-containers. Optional make them evolutionary.
     - Added combatibility with notnotmellons Factorissimo mod. Optional make the factory buildings evolutionary.
+    - Added compatibility with elevated pipes.
   Changes:
     - Updated dependency to OCs_base_assets 0.3.0
     - Updated dependency to OCs_ammo_casting 0.8.0
-    - Updated dependency to OCs_stone_casting 0.8.0 which uses the base mod as above.
+    - Updated dependency to OCs_stone_casting 0.8.0, which uses the base mod as above.
+    - Advanced Foundry tech prerequisit switched from "casting foundation" to "casting concrete".
+    - Removed dependency of "Foundry Expanded" and "Electromagnetic Plant Expanded", as they are now integraded and also never were really dependent in the first place.
+  Bugfixes:
+    - Advanced foundry recipe did not produce the item.
   Other:
     - German localisation now has different word order.
 ---------------------------------------------------------------------------------------------------

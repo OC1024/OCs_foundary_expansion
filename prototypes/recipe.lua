@@ -221,11 +221,11 @@ data:extend({ -- casting vanilla recipes
         icon_size = 64,
         icon_mipmaps = 4,
       },
-      -- {
-      --   icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-molten-iron.png",
-      --   icon_size = 64,
-      --   icon_mipmaps = 4,
-      -- }
+      {
+          icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-foundry.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      }
     },
     category = "metallurgy",
     enabled = false,
@@ -235,7 +235,8 @@ data:extend({ -- casting vanilla recipes
     },
     results = {
       {type = "item", name = "lithium-plate", amount = 1}
-    }
+    },
+    allow_productivity = true,
   },
   -- { -- casting lithium plate
   --   type = "recipe",
@@ -265,7 +266,36 @@ data:extend({ -- casting vanilla recipes
   --     {type = "item", name = "lithium-plate", amount = 5}
   --   }
   -- },
+  { --  freezing water to ice
+    type = "recipe",
+    name = "freezing-water",
+    icons = {
+      {
+        icon = "__space-age__/graphics/icons/ice.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+      {
+        icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-cryo-plant.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      }
+    },
+    category = "cryogenics",
+    -- subgroup = "fluid-recipes",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {
+      {type = "fluid", name = "water", amount = 20},
+    },
+    results = {
+      {type = "item", name = "ice", amount = 1}
+    },
+    allow_productivity = false,
+    allow_decomposition = false,
+  }
 })
+allow_productivity("forging-lithium-plate")
 
 data:extend({
   -- { -- LDS space platform
@@ -329,6 +359,42 @@ data:extend({
     allow_productivity = false,
     auto_recycle = false,
   },
+  { -- casting normal space platform foundation
+    type = "recipe",
+    name = "casting-space-platform-foundation",
+    category = "metallurgy",
+    -- subgroup = "space-related",
+    -- order = "a[space-platform-foundation]-c[tungsten]",
+    icons = {
+      {
+        icon = "__space-age__/graphics/icons/space-platform-foundation.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+      {
+        icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-molten-copper-shifted.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+      {
+        icon = "__OCs_base_assets__/graphics/icons/overlayer-recipe-molten-iron.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      }
+    },
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+      {type = "fluid", name = "molten-iron", amount = 600},
+      {type = "fluid", name = "molten-copper", amount = 100},
+    },
+    results = {
+      {type = "item", name = "space-platform-foundation", amount = 1}
+    },
+    allow_decomposition = false,
+    allow_productivity = false,
+    auto_recycle = false,
+  },
 })
 
 data:extend({ -- buildings
@@ -358,6 +424,9 @@ data:extend({ -- buildings
     {type = "item", name = "advanced-circuit", amount = 40},
     {type = "item", name = "tungsten-plate", amount = 25},
     {type = "item", name = "foundry", amount = 1},
+  },
+  results = {
+    {type = "item", name = "advanced-foundry", amount = 1}
   },
   allow_productivity = false,
   allow_decomposition = true,
@@ -394,16 +463,34 @@ local new_recipes_dict = {
   ["heat-pipe"] = "metallurgy",
   ["steam-turbine"] = "metallurgy",
   ["boiler"] = "metallurgy",
-  -- buildings
-  ["solar-panel"] = "metallurgy", -- factorio says that is electronics so casting is forbidden due to blacklist_category
-  ["steel-furnace"] = "metallurgy",
+  -- energy distribution
+  ["small-electric-pole"] = "electromagnetics",
+  ["medium-electric-pole"] = "electromagnetics",
+  ["big-electric-pole"] = "electromagnetics",
+  ["substation"] = "electromagnetics",
+  ["solar-panel"] = "electromagnetics",
+  -- ["accumulator"] = "electromagnetics", -- useless as the battery is chemistry
+  -- other buildings
+  -- ["steel-furnace"] = "metallurgy",
+  -- item storage
   ["iron-chest"] = "metallurgy",
   ["steel-chest"] = "metallurgy",
+
+  -- intermediates
+  ["engine-unit"] = "metallurgy",
+  ["electric-engine-unit"] = "electromagnetics",
+  -- space related
+  -- ["space-platform-foundation"] = "metallurgy", -- manually created because same item is casted differently
+  ["tungsten-space-platform-foundation"] = "metallurgy",
+  -- testing
   -- ["coal-liquefaction"] = "oil-refining", -- should be blacklisted by category
   -- ["plastic-bar"] = "chemistry", -- blacklisted by item and/or category
   -- ["solid-fuel-from-light-oil"] = "crafting-with-fluid", -- blacklisted by ingredients
-  ["tungsten-space-platform-foundation"] = "metallurgy",
 
+  -- vehicles
+  ["locomotive"] = "metallurgy",
+  ["cargo-wagon"] = "metallurgy",
+  ["fluid-wagon"] = "metallurgy",
   ["car"] = "metallurgy",
   ["tank"] = "metallurgy",
 }

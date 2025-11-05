@@ -1,3 +1,7 @@
+
+data.raw["recipe"]["engine-unit"].category = "metallurgy-or-assembling"  -- use this as hotfix of the mod "foundry-expanded"
+data.raw["recipe"]["space-platform-foundation"].category = "metallurgy-or-assembling"
+
 -- prepare the generator for recipe.lua and compat files
 require("__OCs_base_assets__.prototypes.utils.helper")
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api") -- good practice

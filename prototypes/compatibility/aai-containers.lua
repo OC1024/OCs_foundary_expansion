@@ -3,7 +3,7 @@
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
 
 -- [[
-if settings["aai_storage_evolution"].value then
+if settings.startup["aai_storage_evolution"].value then
     -- change the standard recipes to an evolution. the casting will be changed automatically
     if data.raw["recipe"]["aai-strongbox"] then
       data.raw["recipe"]["aai-strongbox"].ingredients = {
@@ -13,14 +13,14 @@ if settings["aai_storage_evolution"].value then
     end
     if data.raw["recipe"]["aai-storehouse"] then
       data.raw["recipe"]["aai-storehouse"].ingredients = {
-        {type = "item", name = "strongbox", amount = 2}, -- 24*2=48
+        {type = "item", name = "aai-strongbox", amount = 2}, -- 24*2=48
         {type = "item", name = "steel-plate", amount = 52}, -- 48 + 52 = 100steel-plate as before
         {type = "item", name = "concrete", amount = 50}, -- as before
       }
     end
     if data.raw["recipe"]["aai-warehouse"] then
       data.raw["recipe"]["aai-warehouse"].ingredients = {
-        {type = "item", name = "storehouse", amount = 1},
+        {type = "item", name = "aai-storehouse", amount = 1},
         {type = "item", name = "steel-plate", amount = 100}, -- =200steel-plate as before
         {type = "item", name = "concrete", amount = 50}, -- 50 + 50
       }
@@ -28,6 +28,29 @@ if settings["aai_storage_evolution"].value then
     log("Replaced aai storage container base recipes with an evolutionary ones.")
 end
 -- ]]
+-- adding aai boxes (normal) to 
+local aai_boxes = {
+  "aai-strongbox",
+  "aai-storehouse",
+  "aai-warehouse",
+}
+local logistic_names = {
+  "active-provider",
+  "passive-provider",
+  "storage",
+  "buffer",
+  "requester"
+}
+-- build mapping
+local category_remapping = {}
+
+for _, box in ipairs(aai_boxes) do
+  for _, logi in ipairs(logistic_names) do
+    category_remapping[box .. "-" .. logi] = "electronics"
+  end
+  category_remapping[box] = "pressing"
+end
+change_multiple_crafting_category(category_remapping)
 
 
 local new_recipes = {

@@ -1,30 +1,20 @@
 data:extend({
-    -- {
-    --     type = "int-setting",
-    --     name = "science-productivity-max-level",
-    --     setting_type = "startup",
-    --     default_value = -1,
-    --     minimum_value = -1,
-    --     maximum_value = 1024, -- easteregg
-    --     order = "c-a"
-    -- },
-    -- {
-    --     type = "bool-setting",
-    --     name = "allow-planetary-sci-productivity",
-    --     setting_type = "startup",
-    --     default_value = true,
-    --     order = "c-b"
-    -- },
+    {
+        type = "bool-setting",
+        name = "early_advanced_foundry",
+        setting_type = "startup",
+        default_value = true,
+    },
     {
         type = "bool-setting",
         name = "aai_storage_evolution",
         setting_type = "startup",
-        default_value = true, -- later set to false
+        default_value = true,
     },
     {
         type = "bool-setting",
         name = "notnotmellons_factorissimo_evolution",
         setting_type = "startup",
-        default_value = true, -- later set to false
+        default_value = false,
     },
 })
