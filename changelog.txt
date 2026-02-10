@@ -1,4 +1,34 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: 2026-02-10
+  Changes:
+    - Renamed internal names of settings. Please double-check if migration didn't work. Sorry.
+  Compatibility:
+    - [AAI container] Default setting of "aai storage evolution" is now off.
+    - [notnotmellons Factorissimo] Default setting of "Factorissimo Evolution" is now off.
+    - [Metal and Stars] Added few items to the EM plant.
+    - [long stack inserter] Added long stack inserter to the EM plant. It's cheaty, I know.
+    - [K2SO] Adding more items to the EM plant and foundry, respectively. If you think that's cheaty, don't use it.
+  Bugfixes:
+    - Added missing localisations.
+  Other:
+    - Deleted old unused lines and file "exampe-mod-old.lua" file. For modders, a current "exampe-mod.lua" is provided.
+    - Unified internal mod-settings names.
+    - Updating requirements for [OCs Ammo Casting] and [OCs Stone Casting] to current version.
+    - Updated dependency of [OCs Base Assets] to >0.3.3 as helper functions were updated.
+  Localisation:
+    - Unify EN localisation with my other mods.
+---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 2025-11-05
+  Bugfixes:
+    - Localisation EN replace "Cast" with "Casting" to be consistend with my other mods.
+    - Added missing localisation for many EM plant recipes, logistics.
+    - Fixed type in localisation for [K2SO] casting automation core.
+  Other:
+    - Updated dependency to OCs_base_assets 0.3.1
+    - Deleted old unused lines of code.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: 2025-11-05
   Minor Features:

@@ -7,12 +7,17 @@
 require("__OCs_base_assets__.prototypes.utils.helper")
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
 
+if mods["long_stack_inserter"] then
+    require("prototypes.compatibility.long-stack-inserter")
+end
+if mods["Metal-and-Stars"] then
+    require("prototypes.compatibility.metal-and-stars")
+end
 if mods["aai-industry"] then
     require("prototypes.compatibility.aai-industry")
 end
 
 if mods["Krastorio2-spaced-out"] then -- replaces normal Krastorio2 with space-age compatible version
-    require("__OCs_base_assets__.prototypes.compatibility.Krastorio2")
     require("prototypes.compatibility.Krastorio2")
 end
 

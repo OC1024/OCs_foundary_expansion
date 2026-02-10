@@ -65,9 +65,15 @@ local casting_dict = {
 }
 generator_api.batch_generator(casting_dict)
 
--- 3. Add Recipes to Techs (note just helper, not generator)
+-- 3. Add and Remove Recipes to Techs (Note: helper function, not generator)
 local recipe_tech_mapping = {
     ["casting-item-name-1"] = {"technology-name-1","tech-name-3"},
-    ["casting-item-name-2"] = {"technology-name-2"},
+    ["bio-item-name-2"] = "technology-name-2",
 }
 add_recipe_unlocks(recipe_tech_mapping)
+
+local unwanted_recipe_mapping = {
+    ["pulsing-bad-item-1"] = {"random-tech-name-1","random-tech-name-2"},
+    ["cryo-bad-item-2"] = "technology-name-3"
+}
+remove_recipe_unlocks(unwanted_recipe_mapping)

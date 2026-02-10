@@ -1,7 +1,7 @@
 
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
 -- [[
-if settings.startup["notnotmellons_factorissimo_evolution"].value then
+if settings.startup["notnotmellons-factorissimo-evolution"].value then
   -- change the standard recipes to an evolution. the casting will be changed automatically
   -- vanilla version is overwritten to medium artillery shell
   -- if data.raw["recipe"]["factory-1"] then
@@ -49,6 +49,4 @@ local adding_prereq_dict = {
   ["factory-architecture-t1"] = {"lava-to-stone-tech"},
   ["factory-architecture-t2"] = {"casting-concrete-tech"},
 }
-for index, prereq in ipairs(adding_prereq_dict) do
-  add_prerequisite(index,prereq)
-end
+add_prerequisites(adding_prereq_dict)

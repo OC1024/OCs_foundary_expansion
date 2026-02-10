@@ -27,9 +27,9 @@ data:extend({
   },
 })
 
-if not settings.startup["early_advanced_foundry"].value then -- if not early then later
-  table.insert(data.raw.technology["advanced-foundry-tech"].prerequisites, "cryogenetic-science-pack")
-  table.insert(data.raw.technology["advanced-foundry-tech"].unit.ingredients, {"cryogenetic-science-pack", 1})
+if not settings.startup["early-advanced-foundry"].value then -- if not early then later
+  table.insert(data.raw.technology["advanced-foundry-tech"].prerequisites, "cryogenic-science-pack")
+  table.insert(data.raw.technology["advanced-foundry-tech"].unit.ingredients, {"cryogenic-science-pack", 1})
 end
 
 -- add casting (item) to the tech (or multiple ones)
@@ -74,7 +74,7 @@ local recipe_unlocks = {
     -- intermediates
     ["casting-engine-unit"] = "foundry",
     ["pulse-electric-engine-unit"] =  "electric-engine",
-    ["forging-lithium-plate"] = "lithium-processing", -- not frm the generator but manually created
+    ["forging-lithium-plate"] = "lithium-processing", -- manually created
     ["freezing-water"] = "cryogenetic-plant", -- also custom recipe
 
     -- space platform

@@ -67,11 +67,14 @@ local mapping = {
   ["power-switch"] = "electronics",
   ["programmable-speaker"] = "electronics",
   ["display-panel"] = "electronics",
+  -- switchbutton mod
   ["switchbutton"] = "electronics",
   ["switchbutton2"] = "electronics",
   -- logistics others
-  ["foundation"] = "crafting-with-fluid-or-metallurgy",
+  ["foundation"] = "crafting-with-fluid-or-metallurgy", -- to cheaty?
   -- civil equipment
+  ["toolbelt-equipment"] = "electronics",
+  ["nightvision-equipment"] = "electronics",
   ["exoskeleton-equipment"] = "electronics",
   ["personal-roboport-equipment"] = "electronics",
   ["personal-roboport-mk2-equipment"] = "electronics",
@@ -83,6 +86,7 @@ local mapping = {
   ["battery-mk3-equipment"] = "electronics",
   -- military equipment
   ["laser-turret"] = "electronics",
+  ["discharge-defence-equipment"] = "electronics",
   ["energy-shield-equipment"] = "electronics",
   ["energy-shield-mk2-equipment"] = "electronics",
   ["personal-laser-defense-equipment"] = "electronics",

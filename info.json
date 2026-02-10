@@ -1,20 +1,21 @@
 {
   "name": "OCs_foundary_expansion",
-  "version": "0.5.0",
+  "version": "0.5.2",
   "title": "OCs Foundry Expansion",
   "author": "OC1024",
-  "description": "This will be the modpack mod for all of the OC mods. Work in progress. It does indeed also add new mechanics and items itself but some core elements are outsourced to the submods. Also the two optional '~ expanded' are there for the theme and not because they are modified.",
+  "description": "This will be the modpack and extra stuff for all of the OC mods. Work in progress. It does indeed also add new mechanics and items itself but some core elements are outsourced to the submods.",
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0",
     "space-age",
-    "OCs_base_assets >= 0.3.0",
+    "OCs_base_assets >= 0.3.3",
     "? OCs_alt_sciences",
-    "OCs_ammo_casting >= 0.8.0",
-    "OCs_stone_casting >=0.8.0",
+    "OCs_ammo_casting >= 0.8.4",
+    "OCs_stone_casting >=0.8.3",
     "? OCs_core_extraction",
     "? aai-containters >=0.3.1",
     "? aai-industry >= 0.6.0",
-    "? Krastorio2-spaced-out >= 1.4.0"
+    "? Krastorio2-spaced-out >= 1.4.0",
+    "(?) long_stack_iserter"
   ]
 }
