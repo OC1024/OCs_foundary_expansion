@@ -1,12 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.3
-Date: 2026-04-11-wip
+Date: 2026-04-13
   Minor Features:
     - Added extra combinator recipes for the EM plant.
   Bugfixes:
     - Freezing water to ice now is unlocked by default. (unlockable before)
   Other:
-    - Updated dependency of [OCs Base Assets] to >=0.3.5 as helper functions were updated. (makes it incompatible with older versions)
+    - Updated dependency of [OCs Base Assets] to >=0.4.0 as helper functions were updated. (makes it incompatible with older versions)
     - Updated dependency of [OCs Ammo Casting] to >=0.9.0.
     - Updated dependency of [OCs Stone Casting] to >=0.8.5.
     - Set this mod properly to be a [Space Age] mod, which it was from the start.

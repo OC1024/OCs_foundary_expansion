@@ -8,7 +8,7 @@
   "dependencies": [
     "base >= 2.0",
     "space-age",
-    "OCs_base_assets >= 0.3.5",
+    "OCs_base_assets >= 0.4.0",
     "OCs_ammo_casting >= 0.9.0",
     "OCs_stone_casting >=0.8.5",
     "? OCs_alt_sciences >= 0.2.0",

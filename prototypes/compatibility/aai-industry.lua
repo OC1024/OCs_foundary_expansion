@@ -21,11 +21,11 @@ local new_recipes = {
 generator_api.batch_generator(new_recipes)
 
 local recipe_unlock_mapping = {
-    ["casting-motor"] = {"foundry"},
-    ["pulse-electric-motor"] = {"electricity"},
-    ["pulse-small-iron-electric-pole"] = {"electricity"},
-    ["pulse-burner-turbine"] = "electricity",
+    ["oc-casting-motor"] = {"foundry"},
+    ["oc-pulse-electric-motor"] = {"electricity"},
+    ["oc-pulse-small-iron-electric-pole"] = {"electricity"},
+    ["oc-pulse-burner-turbine"] = "electricity",
     ["electronic-circuit-wood"] = "electronics", -- oversight by AAI it seeems
-    -- ["pulse-electronic-circuit-wood"] = "electronics", -- see above
+    -- ["oc-pulse-electronic-circuit-wood"] = "electronics", -- see above
 }
 oc_helper.add_recipe_unlocks(recipe_unlock_mapping)

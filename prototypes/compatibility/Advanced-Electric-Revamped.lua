@@ -13,11 +13,11 @@ local casting_dict = {
 generator_api.batch_generator(casting_dict)
 
 local recipe_tech_mapping = {
-    ["pulse-advanced-solar"] = {"advanced-solar"},
-    ["pulse-elite-solar"] = {"elite-solar"},
-    ["pulse-ultimate-solar"] = {"ultimate-solar"},
-    ["pulse-advanced-accumulator"] = {"advanced-accumulator"},
-    ["pulse-elite-accumulator"] = {"elite-accumulator"},
-    ["pulse-ultimate-accumulator"] = {"ultimate-accumulator"},
+    ["oc-pulse-advanced-solar"] = {"advanced-solar"},
+    ["oc-pulse-elite-solar"] = {"elite-solar"},
+    ["oc-pulse-ultimate-solar"] = {"ultimate-solar"},
+    ["oc-pulse-advanced-accumulator"] = {"advanced-accumulator"},
+    ["oc-pulse-elite-accumulator"] = {"elite-accumulator"},
+    ["oc-pulse-ultimate-accumulator"] = {"ultimate-accumulator"},
 }
 oc_helper.add_recipe_unlocks(recipe_tech_mapping)

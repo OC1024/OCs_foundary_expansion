@@ -92,18 +92,18 @@ generator_api.batch_generator(casting_dict)
 
 -- 3. Add Recipes to Techs
 local recipe_tech_mapping = {
-    ["pulse-kr-blank-tech-card"] = { "electromagnetic-plant" }, -- or "automation-science-pack" or free
-    ["casting-kr-automation-core"] = { "foundry" },             -- or "kr-automation-core" tech
-    ["casting-kr-inserter-parts"] = "foundry",
+    ["oc-pulse-kr-blank-tech-card"] = { "electromagnetic-plant" }, -- or "automation-science-pack" or free
+    ["oc-casting-kr-automation-core"] = { "foundry" },             -- or "kr-automation-core" tech
+    ["oc-casting-kr-inserter-parts"] = "foundry",
     -- imersium intermediates
-    ["casting-kr-imersium-beam"] = { "kr-imersium-processing" },
-    ["casting-kr-imersium-gear-wheel"] = { "kr-imersium-processing" },
+    ["oc-casting-kr-imersium-beam"] = { "kr-imersium-processing" },
+    ["oc-casting-kr-imersium-gear-wheel"] = { "kr-imersium-processing" },
     -- kr-logistic-5 (purple belts)
-    ["casting-kr-superior-transport-belt"] = { "kr-logistic-5" },
-    ["casting-kr-superior-underground-belt"] = { "kr-logistic-5" },
-    ["casting-kr-superior-splitter"] = { "kr-logistic-5" },
+    ["oc-casting-kr-superior-transport-belt"] = { "kr-logistic-5" },
+    ["oc-casting-kr-superior-underground-belt"] = { "kr-logistic-5" },
+    ["oc-casting-kr-superior-splitter"] = { "kr-logistic-5" },
     -- high-tech
-    ["pulse-kr-empty-dt-fuel-cell"] = { "kr-fusion-energy" },
+    ["oc-pulse-kr-empty-dt-fuel-cell"] = { "kr-fusion-energy" },
     ["kr-matter-stabilizer"] = "kr-matter-processing",
     ["kr-teleportation-gps-module"] = "kr-planetary-teleporter",
 }

@@ -8,6 +8,6 @@ local casting_dict = {
 generator_api.batch_generator(casting_dict)
 
 local mapping = {
-    ["casting-elevated-pipe"] = "elevated-pipe",
+    ["oc-casting-elevated-pipe"] = "elevated-pipe",
 }
 oc_helper.add_recipe_unlocks(mapping)

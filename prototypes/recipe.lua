@@ -61,7 +61,6 @@ data:extend({ -- custom base recipes
     allow_decomposition = false,
   }
 })
-oc_helper.allow_productivity("forging-lithium-plate")
 
 data:extend({
   --[[
@@ -130,7 +129,7 @@ data:extend({
   },
   { -- casting normal space platform foundation
     type = "recipe",
-    name = "casting-space-platform-foundation",
+    name = "oc-casting-space-platform-foundation",
     category = "metallurgy",
     -- subgroup = "space-related",
     -- order = "a[space-platform-foundation]-c[tungsten]",
@@ -285,11 +284,11 @@ local mapping = {
   -- mining
   ["electric-mining-drill"] = "pressing",
   -- intermediates
-  ["engine-unit"] = "metallurgy-or-assembling", -- big non-electric engine
-  ["electric-engine-unit"] = "electronics-or-assembling", -- big electric engine
+  ["engine-unit"] = "metallurgy-or-assembling", -- non-electric engine. no handcrafting
+  ["electric-engine-unit"] = "electronics-or-assembling", -- electric engine
   -- ["lithium-plate"] = "metallurgy-or-smelting", -- category does not exist
   -- space
-  ["space-platform-foundation"] = "pressing",
+  ["space-platform-foundation"] = "pressing",-- or metallurgy-or-assembling
   -- logistics - robots
   ["roboport"] = "electronics",
   ["flying-robot-frame"] = "electronics",

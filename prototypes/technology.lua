@@ -36,60 +36,60 @@ end
 -- add special recipe unlocks to the tech (or multiple ones)
 local recipe_unlocks = {
     -- energy production
-    ["casting-steam-engine"] = {"foundry"},
-    ["casting-heat-pipe"] = {"nuclear-power","heating-tower"},
-    ["casting-heat-exchanger"] = {"nuclear-power","heating-tower"},
-    ["casting-steam-turbine"] = {"nuclear-power","heating-tower"},
-    ["casting-boiler"] = {"foundry"},
-    ["casting-heating-tower"] = {"heating-tower"},
+    ["oc-casting-steam-engine"] = {"foundry"},
+    ["oc-casting-heat-pipe"] = {"nuclear-power","heating-tower"},
+    ["oc-casting-heat-exchanger"] = {"nuclear-power","heating-tower"},
+    ["oc-casting-steam-turbine"] = {"nuclear-power","heating-tower"},
+    ["oc-casting-boiler"] = {"foundry"},
+    ["oc-casting-heating-tower"] = {"heating-tower"},
     -- energy distribution
-    ["pulse-small-electric-pole"] = "electromagnetic-plant",
-    ["pulse-medium-electric-pole"] = "electric-energy-distribution-1",  -- change that with aai-industry to "medium-electric-pole"
-    ["pulse-big-electric-pole"] = "electric-energy-distribution-1",
-    ["pulse-substation"] = "electric-energy-distribution-2",
-    ["pulse-solar-panel"] = {"solar-energy"},
-    -- ["pulse-accumulator"] = {"electric-energy-accumulator"}, -- useless as the battery is chemistry
+    ["oc-pulse-small-electric-pole"] = "electromagnetic-plant",
+    ["oc-pulse-medium-electric-pole"] = "electric-energy-distribution-1",  -- change that with aai-industry to "medium-electric-pole"
+    ["oc-pulse-big-electric-pole"] = "electric-energy-distribution-1",
+    ["oc-pulse-substation"] = "electric-energy-distribution-2",
+    ["oc-pulse-solar-panel"] = {"solar-energy"},
+    -- ["oc-pulse-accumulator"] = {"electric-energy-accumulator"}, -- useless as the battery is chemistry
 
     -- fluid handling
-    ["casting-offshore-pump"] = {"foundry"},
-    ["casting-pump"] = {"fluid-handling"},
-    ["casting-storage-tank"] = {"fluid-handling"},
-    ["casting-barrel"] = {"fluid-handling"},
+    ["oc-casting-offshore-pump"] = {"foundry"},
+    ["oc-casting-pump"] = {"fluid-handling"},
+    ["oc-casting-storage-tank"] = {"fluid-handling"},
+    ["oc-casting-barrel"] = {"fluid-handling"},
     -- item storage
-    ["casting-iron-chest"] = {"foundry"},
-    ["casting-steel-chest"] = {"foundry"},
+    ["oc-casting-iron-chest"] = {"foundry"},
+    ["oc-casting-steel-chest"] = {"foundry"},
     -- logistics - belts
-    ["casting-transport-belt"] = {"logistics"},
-    ["casting-underground-belt"] = {"logistics"},
-    ["casting-splitter"] = {"logistics"},
-    ["casting-fast-transport-belt"] = {"logistics-2"},
-    ["casting-fast-underground-belt"] = {"logistics-2"},
-    ["casting-fast-splitter"] = {"logistics-2"},
-    ["casting-express-transport-belt"] = {"logistics-3"},
-    ["casting-express-underground-belt"] = {"logistics-3"},
-    ["casting-express-splitter"] = {"logistics-3"},
-    ["casting-turbo-transport-belt"] = {"turbo-transport-belt"},
-    ["casting-turbo-underground-belt"] = {"turbo-transport-belt"},
-    ["casting-turbo-splitter"] = {"turbo-transport-belt"},
+    ["oc-casting-transport-belt"] = {"logistics"},
+    ["oc-casting-underground-belt"] = {"logistics"},
+    ["oc-casting-splitter"] = {"logistics"},
+    ["oc-casting-fast-transport-belt"] = {"logistics-2"},
+    ["oc-casting-fast-underground-belt"] = {"logistics-2"},
+    ["oc-casting-fast-splitter"] = {"logistics-2"},
+    ["oc-casting-express-transport-belt"] = {"logistics-3"},
+    ["oc-casting-express-underground-belt"] = {"logistics-3"},
+    ["oc-casting-express-splitter"] = {"logistics-3"},
+    ["oc-casting-turbo-transport-belt"] = {"turbo-transport-belt"},
+    ["oc-casting-turbo-underground-belt"] = {"turbo-transport-belt"},
+    ["oc-casting-turbo-splitter"] = {"turbo-transport-belt"},
     -- logistics - bots
 
     -- intermediates
-    ["casting-engine-unit"] = "foundry",
-    ["pulse-electric-engine-unit"] =  "electric-engine",
+    ["oc-casting-engine-unit"] = "foundry",
+    ["oc-pulse-electric-engine-unit"] =  "electric-engine",
     ["forging-lithium-plate"] = "lithium-processing", -- manually created
     ["freezing-water"] = "cryogenic-plant", -- manually created
 
     -- space platform
     -- ["lds-space-platform-foundation"] = {"rocket-silo"},
-    ["casting-space-platform-foundation"] = {"rocket-silo"},
+    ["oc-casting-space-platform-foundation"] = {"rocket-silo"},
     ["tungsten-space-platform-foundation"] = {"rocket-silo"},
-    ["casting-tungsten-space-platform-foundation"] = {"rocket-silo"},
+    ["oc-casting-tungsten-space-platform-foundation"] = {"rocket-silo"},
 
     -- vehicles
-    ["casting-locomotive"] = {"railway"},
-    ["casting-cargo-wagon"] = {"railway"},
-    ["casting-fluid-wagon"] = {"fluid-wagon"},
-    ["casting-car"] = {"automobilism"},
-    ["casting-tank"] = {"tank"},
+    ["oc-casting-locomotive"] = {"railway"},
+    ["oc-casting-cargo-wagon"] = {"railway"},
+    ["oc-casting-fluid-wagon"] = {"fluid-wagon"},
+    ["oc-casting-car"] = {"automobilism"},
+    ["oc-casting-tank"] = {"tank"},
 }
 oc_helper.add_recipe_unlocks(recipe_unlocks)

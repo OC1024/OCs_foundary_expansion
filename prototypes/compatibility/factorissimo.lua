@@ -61,7 +61,7 @@ data:extend({
       count = 100,
     },
     effects = {
-      { type = "unlock-recipe", recipe = "casting-factory-1" }
+      { type = "unlock-recipe", recipe = "oc-casting-factory-1" }
     },
   },
   {
@@ -91,7 +91,7 @@ data:extend({
       count = 250,
     },
     effects = {
-      { type = "unlock-recipe", recipe = "casting-factory-2" }
+      { type = "unlock-recipe", recipe = "oc-casting-factory-2" }
     },
   },
   {
@@ -123,7 +123,7 @@ data:extend({
       count = 1000,
     },
     effects = {
-      { type = "unlock-recipe", recipe = "casting-factory-3" }
+      { type = "unlock-recipe", recipe = "oc-casting-factory-3" }
     },
   },
   {
@@ -159,21 +159,8 @@ data:extend({
       time = 30
     },
     effects = {
-      --  { type = "unlock-recipe", recipe = "casting-space-factory"
+      --  { type = "unlock-recipe", recipe = "oc-casting-space-factory"
     },
     hidden = true,
   }
 })
-
--- local recipe_unlock_mapping = {
---   ["casting-factory-1"] = { "factory-architecture-t1" },
---   ["casting-factory-2"] = { "factory-architecture-t2" },
---   ["casting-factory-3"] = { "factory-architecture-t3" },
--- }
--- oc_helper.add_recipe_unlocks(recipe_unlock_mapping)
-
--- local adding_prereq_dict = {
---   ["factory-architecture-t1"] = { "lava-to-stone-tech" },
---   ["factory-architecture-t2"] = { "casting-concrete-tech" },
--- }
--- oc_helper.add_prerequisites(adding_prereq_dict)

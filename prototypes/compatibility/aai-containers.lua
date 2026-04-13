@@ -59,8 +59,8 @@ local new_recipes = {
 generator_api.batch_generator(new_recipes)
 
 local recipe_unlock_mapping = {
-    ["casting-aai-strongbox"] = {"aai-strongbox-base"},
-    ["casting-aai-storehouse"] = {"aai-storehouse-base"},
-    ["casting-aai-warehouse"] = {"aai-warehouse-base"},
+    ["oc-casting-aai-strongbox"] = {"aai-strongbox-base"},
+    ["oc-casting-aai-storehouse"] = {"aai-storehouse-base"},
+    ["oc-casting-aai-warehouse"] = {"aai-warehouse-base"},
 }
 oc_helper.add_recipe_unlocks(recipe_unlock_mapping)
