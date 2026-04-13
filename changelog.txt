@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+Date: 2026-04-11-wip
+  Minor Features:
+    - Added extra combinator recipes for the EM plant.
+  Bugfixes:
+    - Freezing water to ice now is unlocked by default. (unlockable before)
+  Other:
+    - Updated dependency of [OCs Base Assets] to >=0.3.5 as helper functions were updated. (makes it incompatible with older versions)
+    - Updated dependency of [OCs Ammo Casting] to >=0.9.0.
+    - Updated dependency of [OCs Stone Casting] to >=0.8.5.
+    - Set this mod properly to be a [Space Age] mod, which it was from the start.
+    - Moved the code for switching recipe categories from item.lua into recipes.lua.
+  Compatibility:
+    - [Factorissimo] Normal researches are not locked behind lava-to-stone tech anymore, and casting recipes have dedicated techs instead. This make them usable again even without visiting Vulcanus.
+    - Added compatibility with [Advanced-Electric-Revamped-v16].
+    - Added compatibility with [nixie-tubes].
+---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 2026-02-10
   Changes:
@@ -15,7 +32,7 @@ Date: 2026-02-10
     - Deleted old unused lines and file "exampe-mod-old.lua" file. For modders, a current "exampe-mod.lua" is provided.
     - Unified internal mod-settings names.
     - Updating requirements for [OCs Ammo Casting] and [OCs Stone Casting] to current version.
-    - Updated dependency of [OCs Base Assets] to >0.3.3 as helper functions were updated.
+    - Updated dependency of [OCs Base Assets] to >=0.3.3 as helper functions were updated.
   Localisation:
     - Unify EN localisation with my other mods.
 ---------------------------------------------------------------------------------------------------

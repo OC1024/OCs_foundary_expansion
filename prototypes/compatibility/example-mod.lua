@@ -1,6 +1,7 @@
 -- === Example Strukture for a compat-file ===
 -- pepare the generator
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
+local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
 
 
 -- 1. Preparations: Edit all Tables
@@ -60,7 +61,7 @@ generator_api.register_multi_category_blacklists(multi_category_blacklists)
 -- 2. Execute the Generator. The most crucial part of the compatibility file. Note: this will produce recipes with the name "prefix-item-name-1"
 local casting_dict = {
     ["item-name-1"] = "metallurgy",
-    ["item-name-2"] = "chemistry",
+    ["item-name-2"] = "electromagnetics",
     ["item-name-3"] = "organic",
 }
 generator_api.batch_generator(casting_dict)
@@ -70,10 +71,10 @@ local recipe_tech_mapping = {
     ["casting-item-name-1"] = {"technology-name-1","tech-name-3"},
     ["bio-item-name-2"] = "technology-name-2",
 }
-add_recipe_unlocks(recipe_tech_mapping)
+oc_helper.add_recipe_unlocks(recipe_tech_mapping)
 
 local unwanted_recipe_mapping = {
     ["pulsing-bad-item-1"] = {"random-tech-name-1","random-tech-name-2"},
     ["cryo-bad-item-2"] = "technology-name-3"
 }
-remove_recipe_unlocks(unwanted_recipe_mapping)
+oc_helper.remove_recipe_unlocks(unwanted_recipe_mapping)

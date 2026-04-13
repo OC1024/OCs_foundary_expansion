@@ -1,3 +1,4 @@
+local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
 
 data:extend({
   { --  advanced foundry
@@ -32,7 +33,7 @@ if not settings.startup["early-advanced-foundry"].value then -- if not early the
   table.insert(data.raw.technology["advanced-foundry-tech"].unit.ingredients, {"cryogenic-science-pack", 1})
 end
 
--- add casting (item) to the tech (or multiple ones)
+-- add special recipe unlocks to the tech (or multiple ones)
 local recipe_unlocks = {
     -- energy production
     ["casting-steam-engine"] = {"foundry"},
@@ -71,11 +72,12 @@ local recipe_unlocks = {
     ["casting-turbo-underground-belt"] = {"turbo-transport-belt"},
     ["casting-turbo-splitter"] = {"turbo-transport-belt"},
     -- logistics - bots
+
     -- intermediates
     ["casting-engine-unit"] = "foundry",
     ["pulse-electric-engine-unit"] =  "electric-engine",
     ["forging-lithium-plate"] = "lithium-processing", -- manually created
-    ["freezing-water"] = "cryogenetic-plant", -- also custom recipe
+    ["freezing-water"] = "cryogenic-plant", -- manually created
 
     -- space platform
     -- ["lds-space-platform-foundation"] = {"rocket-silo"},
@@ -90,4 +92,4 @@ local recipe_unlocks = {
     ["casting-car"] = {"automobilism"},
     ["casting-tank"] = {"tank"},
 }
-add_recipe_unlocks(recipe_unlocks)
+oc_helper.add_recipe_unlocks(recipe_unlocks)

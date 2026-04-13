@@ -1,6 +1,6 @@
 {
   "name": "OCs_foundary_expansion",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "title": "OCs Foundry Expansion",
   "author": "OC1024",
   "description": "This will be the modpack and extra stuff for all of the OC mods. Work in progress. It does indeed also add new mechanics and items itself but some core elements are outsourced to the submods.",
@@ -8,14 +8,20 @@
   "dependencies": [
     "base >= 2.0",
     "space-age",
-    "OCs_base_assets >= 0.3.3",
-    "? OCs_alt_sciences",
-    "OCs_ammo_casting >= 0.8.4",
-    "OCs_stone_casting >=0.8.3",
+    "OCs_base_assets >= 0.3.5",
+    "OCs_ammo_casting >= 0.9.0",
+    "OCs_stone_casting >=0.8.5",
+    "? OCs_alt_sciences >= 0.2.0",
+    "? OCs_nauvis_science_ports",
     "? OCs_core_extraction",
     "? aai-containters >=0.3.1",
     "? aai-industry >= 0.6.0",
     "? Krastorio2-spaced-out >= 1.4.0",
-    "(?) long_stack_iserter"
+    "? metal-and-stars",
+    "? long_stack_inserter",
+    "? elevated-pipes",
+    "? factorissimo-2-notnotmelon",
+    "? Advanced-Electric-Revamped-v16",
+    "? nixie-tubes"
   ]
 }

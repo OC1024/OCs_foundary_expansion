@@ -1,0 +1,94 @@
+{
+    "recipe": [
+      ["casting-transport-belt", "oc-casting-transport-belt"],
+      ["casting-underground-belt", "oc-casting-underground-belt"],
+      ["casting-splitter", "oc-casting-splitter"],
+      ["casting-fast-transport-belt", "oc-casting-fast-transport-belt"],
+      ["casting-fast-underground-belt", "oc-casting-fast-underground-belt"],
+      ["casting-fast-splitter", "oc-casting-fast-splitter"],
+      ["casting-express-transport-belt", "oc-casting-express-transport-belt"],
+      ["casting-express-splitter", "oc-casting-express-splitter"],
+      ["casting-express-underground-belt", "oc-casting-express-underground-belt"],
+      ["casting-turbo-transport-belt", "oc-casting-turbo-transport-belt"],
+      ["casting-turbo-splitter", "oc-casting-turbo-splitter"],
+      ["casting-turbo-underground-belt", "oc-casting-turbo-underground-belt"],
+      ["casting-offshore-pump", "oc-casting-offshore-pump"],
+      ["casting-pump", "oc-casting-pump"],
+      ["casting-storage-tank", "oc-casting-storage-tank"],
+      ["casting-barrel", "oc-casting-barrel"],
+      ["casting-heating-tower", "oc-casting-heating-tower"],
+      ["casting-steam-engine", "oc-casting-steam-engine"],
+      ["casting-heat-exchanger", "oc-casting-heat-exchanger"],
+      ["casting-heat-pipe", "oc-casting-heat-pipe"],
+      ["casting-steam-turbine", "oc-casting-steam-turbine"],
+      ["casting-boiler", "oc-casting-boiler"],
+
+      ["pulse-small-electric-pole", "oc-pulse-small-electric-pole"],
+      ["pulse-medium-electric-pole", "oc-pulse-medium-electric-pole"],
+      ["pulse-big-electric-pole", "oc-pulse-big-electric-pole"],
+      ["pulse-substation", "oc-pulse-substation"],
+      ["pulse-solar-panel", "oc-pulse-solar-panel"],
+      ["pulse-small-lamp", "oc-pulse-small-lamp"],
+      ["pulse-arithmetic-combinator", "oc-pulse-arithmetic-combinator"],
+      ["pulse-decider-combinator", "oc-pulse-decider-combinator"],
+      ["pulse-selector-combinator", "oc-pulse-selector-combinator"],
+      ["pulse-constant-combinator", "oc-pulse-constant-combinator"],
+      ["pulse-power-switch", "oc-pulse-power-switch"],
+      ["pulse-programmable-speaker", "oc-pulse-programmable-speaker"],
+      ["pulse-display-panel", "oc-pulse-display-panel"],
+      ["pulse-radar", "oc-pulse-radar"],
+
+      ["casting-iron-chest", "oc-casting-iron-chest"],
+      ["casting-steel-chest", "oc-casting-steel-chest"],
+
+      ["casting-engine-unit", "oc-casting-engine-unit"],
+      ["pulse-electric-engine-unit", "oc-pulse-electric-engine-unit"],
+      ["casting-tungsten-space-platform-foundation", "oc-casting-tungsten-space-platform-foundation"],
+      ["casting-locomotive", "oc-casting-locomotive"],
+      ["casting-cargo-wagon", "oc-casting-cargo-wagon"],
+      ["casting-fluid-wagon", "oc-casting-fluid-wagon"],
+      ["casting-car", "oc-casting-car"],
+      ["casting-tank", "oc-casting-tank"],
+
+      ["casting-aai-strongbox","oc-casting-aai-strongbox"],
+      ["casting-aai-storehouse","oc-casting-aai-storehouse"],
+      ["casting-aai-warehouse","oc-casting-aai-warehouse"],
+
+      
+      ["casting-motor","oc-casting-motor"],
+      ["pulse-electric-motor","oc-pulse-electric-motor"],
+      ["pulse-small-iron-electric-pole","oc-pulse-small-iron-electric-pole"],
+      ["pulse-burner-turbine","oc-pulse-burner-turbine"],
+
+      
+      ["pulse-advanced-solar","oc-pulse-advanced-solar"],
+      ["pulse-elite-solar","oc-pulse-elite-solar"],
+      ["pulse-ultimate-solar","oc-pulse-ultimate-solar"],
+      ["pulse-advanced-accumulator","oc-pulse-advanced-accumulator"],
+      ["pulse-elite-accumulator","oc-pulse-elite-accumulator"],
+      ["pulse-ultimate-accumulator","oc-pulse-ultimate-accumulator"],
+      
+      ["casting-elevated-pipe","oc-casting-elevated-pipe"],
+
+      
+      ["casting-factory-1","oc-casting-factory-1"],
+      ["casting-factory-2","oc-casting-factory-2"],
+      ["casting-factory-3","oc-casting-factory-3"],
+
+      
+      ["pulse-kr-blank-tech-card", "oc-pulse-kr-blank-tech-card"],
+      ["casting-kr-automation-core", "oc-casting-kr-automation-core"],
+      ["casting-kr-inserter-parts", "oc-casting-kr-inserter-parts"],
+      ["casting-kr-imersium-plate", "oc-casting-kr-imersium-plate"],
+      ["casting-kr-imersium-beam", "oc-casting-kr-imersium-beam"],
+      ["casting-kr-imersium-gear-wheel", "oc-casting-kr-imersium-gear-wheel"],
+      ["casting-kr-empty-dt-fuel-cell", "oc-casting-kr-empty-dt-fuel-cell"],
+      ["pulse-kr-matter-stabilizer", "oc-pulse-kr-matter-stabilizer"],
+      ["pulse-kr-teleportation-gps-module", "oc-pulse-kr-teleportation-gps-module"],
+
+      
+      ["pulse-nixie-tube", "oc-pulse-nixie-tube"],
+      ["pulse-nixie-tube-alpha", "oc-pulse-nixie-tube-alpha"],
+      ["pulse-nixie-tube-small", "oc-pulse-nixie-tube-small"]
+      ]
+}  

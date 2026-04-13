@@ -1,3 +1,4 @@
+local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
 
 local mapping = {
     ["engine-unit"] = "metallurgy-or-assembling",
@@ -5,7 +6,7 @@ local mapping = {
     ["electric-motor"] = "electronics",
     ["small-iron-electric-pole"] = "electronics",
 }
-change_multiple_crafting_category(mapping)
+oc_helper.change_multiple_crafting_category(mapping)
 
 -- load the generator api
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
@@ -25,6 +26,6 @@ local recipe_unlock_mapping = {
     ["pulse-small-iron-electric-pole"] = {"electricity"},
     ["pulse-burner-turbine"] = "electricity",
     ["electronic-circuit-wood"] = "electronics", -- oversight by AAI it seeems
-    -- ["pulse-electronic-circuit-wood"] = "electronics",
+    -- ["pulse-electronic-circuit-wood"] = "electronics", -- see above
 }
-add_recipe_unlocks(recipe_unlock_mapping)
+oc_helper.add_recipe_unlocks(recipe_unlock_mapping)

@@ -1,4 +1,5 @@
 require ("__base__.prototypes.entity.pipecovers") -- for pipe covers
+local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
 local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 

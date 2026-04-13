@@ -1,11 +1,9 @@
--- require("prototypes/entity-updates")
--- require("prototypes/item-updates")
--- require("prototypes.recipe-updates")
--- require("prototypes.technology-updates")
-
--- quick debugging
-require("__OCs_base_assets__.prototypes.utils.helper")
-local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
+if mods ["Advanced-Electric-Revamped-v16"] then
+    require("prototypes.compatibility.Advanced-Electric-Revamped")
+end
+if mods["nixie-tubes"] then
+    require("prototypes.compatibility.nixie-tubes")
+end
 
 if mods["long_stack_inserter"] then
     require("prototypes.compatibility.long-stack-inserter")

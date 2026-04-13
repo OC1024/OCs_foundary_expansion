@@ -1,3 +1,5 @@
+local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
+
 -- changing crafting category (making thins able in foundry and EM plant)
 local mapping = {
     -- intermediates
@@ -17,11 +19,13 @@ local mapping = {
     ["kr-personal-laser-defence-mk2-equipment"] = "electronics",
     ["kr-personal-laser-defence-mk3-equipment"] = "electronics",
     ["kr-personal-laser-defence-mk4-equipment"] = "electronics",
+    ["kr-fusion-reactor-equipment"] = "electronics",
+    ["kr-antimatter-reactor-equipment"] = "electronics",
 }
-change_multiple_crafting_category(mapping)
+oc_helper.change_multiple_crafting_category(mapping)
 
 -- change my lithium recipe
-replace_ingredient("forging-lithium-plate", "item", "lithium", "item", "kr-lithium", true)
+oc_helper.replace_ingredient("forging-lithium-plate", "item", "lithium", "item", "kr-lithium", true)
 if mods["metall-and-stars"] then
     -- hotfix metal and stars lithium output
     -- replace_result("mirandite-processing","item","lithium","item","kr-lithium",true)
@@ -29,7 +33,7 @@ if mods["metall-and-stars"] then
     -- add_result("mirandite-processing","item","kr-lithium",1)
     -- or we create a recipe to switch one to the other
     data:extend({
-        {
+        {-- lithium conversion
             type = "recipe",
             name = "lithium-conversion",
             energy_required = 1,
@@ -103,4 +107,4 @@ local recipe_tech_mapping = {
     ["kr-matter-stabilizer"] = "kr-matter-processing",
     ["kr-teleportation-gps-module"] = "kr-planetary-teleporter",
 }
-add_recipe_unlocks(recipe_tech_mapping)
+oc_helper.add_recipe_unlocks(recipe_tech_mapping)

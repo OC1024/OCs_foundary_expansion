@@ -1,8 +1,6 @@
-
--- load the generator api
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
+local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
 
--- [[
 if settings.startup["aai-storage-evolution"].value then
   -- change the standard recipes to an evolution. the casting will be changed automatically
   if data.raw["recipe"]["aai-strongbox"] then
@@ -27,9 +25,8 @@ if settings.startup["aai-storage-evolution"].value then
   end
   log("Replaced aai storage container base recipes with an evolutionary ones.")
 end
--- ]]
 
--- adding aai boxes (normal) to 
+-- adding aai boxes (normal) to
 local aai_boxes = {
   "aai-strongbox",
   "aai-storehouse",
@@ -51,7 +48,7 @@ for _, box in ipairs(aai_boxes) do
   end
   category_remapping[box] = "pressing"
 end
-change_multiple_crafting_category(category_remapping)
+oc_helper.change_multiple_crafting_category(category_remapping)
 
 
 local new_recipes = {
@@ -66,4 +63,4 @@ local recipe_unlock_mapping = {
     ["casting-aai-storehouse"] = {"aai-storehouse-base"},
     ["casting-aai-warehouse"] = {"aai-warehouse-base"},
 }
-add_recipe_unlocks(recipe_unlock_mapping)
+oc_helper.add_recipe_unlocks(recipe_unlock_mapping)
