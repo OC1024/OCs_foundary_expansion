@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: 2026-04-19
+  Other:
+    - Setting this mod as an Space Age mod.
+    - Renamed to [OCs Exoplanetary Expansion] as it expands foundry and EM plant. Also hints at Exoplanetary Productivity mod.
+    - Moved the "example-mod.lua" compat file to the [OCs Base Assets] for other modders to find it easier.
+  Minor Features:
+    - Adding few more buildings to the foundry or EM plant.
+  Compatibility:
+    - Updated dependecy of [OCs Base Assets] to >=0.4.1, where helper functions were re-grouped and calculation errors were fixed.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.3
 Date: 2026-04-13
   Minor Features:

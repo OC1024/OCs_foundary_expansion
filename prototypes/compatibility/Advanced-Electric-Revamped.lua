@@ -1,6 +1,7 @@
 
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
-local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
+local oc_tech = require("__OCs_base_assets__.prototypes.utils.oc_tech")
+local oc_recipe = require("__OCs_base_assets__.prototypes.utils.oc_recipe")
 
 local casting_dict = {
   ["advanced-solar"] = "electromagnetics",
@@ -20,4 +21,4 @@ local recipe_tech_mapping = {
     ["oc-pulse-elite-accumulator"] = {"elite-accumulator"},
     ["oc-pulse-ultimate-accumulator"] = {"ultimate-accumulator"},
 }
-oc_helper.add_recipe_unlocks(recipe_tech_mapping)
+oc_tech.add_recipe_unlocks(recipe_tech_mapping)

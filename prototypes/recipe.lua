@@ -1,5 +1,5 @@
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
-local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
+local oc_recipe = require("__OCs_base_assets__.prototypes.utils.oc_recipe")
 
 data:extend({ -- custom base recipes
   { -- foundry lithium plate
@@ -167,42 +167,49 @@ data:extend({
 
 data:extend({ -- buildings
   { -- advanced-foundry"
-  type = "recipe",
-  name = "advanced-foundry",
-  category = "metallurgy",
-  group = "production",
-  subgroup = "smelting-machine",
-  order = "d[foundry]-a",
-  -- order = "z-c",
-  icon = "__OCs_foundary_expansion__/graphics/icons/advanced-foundry-icon.png",
-  icon_size = 64, -- icon_mipmaps = 4
-  enabled = false,
-  energy_required = 30,
-  surface_conditions = -- Vulcanus only
-  {
+    type = "recipe",
+    name = "advanced-foundry",
+    category = "metallurgy",
+    group = "production",
+    subgroup = "smelting-machine",
+    order = "d[foundry]-a",
+    -- order = "z-c",
+    icon = "__OCs_foundary_expansion__/graphics/icons/advanced-foundry-icon.png",
+    icon_size = 64, -- icon_mipmaps = 4
+    enabled = false,
+    energy_required = 30,
+    surface_conditions = -- Vulcanus only
     {
-      property = "pressure",
-      min = 4000,
-      max = 4000
-    }
+      {
+        property = "pressure",
+        min = 4000,
+        max = 4000
+      }
+    },
+    ingredients = {
+      {type = "fluid", name = "molten-iron", amount = 300},
+      {type = "item", name = "refined-concrete", amount = 20},
+      {type = "item", name = "advanced-circuit", amount = 40},
+      {type = "item", name = "tungsten-plate", amount = 25},
+      {type = "item", name = "foundry", amount = 1},
+    },
+    results = {
+      {type = "item", name = "advanced-foundry", amount = 1}
+    },
+    allow_productivity = false,
+    allow_decomposition = true,
   },
-  ingredients = {
-    {type = "fluid", name = "molten-iron", amount = 300},
-    {type = "item", name = "refined-concrete", amount = 20},
-    {type = "item", name = "advanced-circuit", amount = 40},
-    {type = "item", name = "tungsten-plate", amount = 25},
-    {type = "item", name = "foundry", amount = 1},
-  },
-  results = {
-    {type = "item", name = "advanced-foundry", amount = 1}
-  },
-  allow_productivity = false,
-  allow_decomposition = true,
-},
 })
 
 -- create new "casting" recipes
 local new_recipes_dict = {
+  -- production
+  ["burner-mining-drill"] = "metallurgy",
+  ["electric-mining-drill"] = "metallurgy",
+  ["pumpjack"] = "metallurgy",
+  ["assembling-machine-1"] = "electromagnetics",
+  ["assembling-machine-2"] = "electromagnetics",
+  ["assembling-machine-3"] = "electromagnetics",
   -- basic transporotation 
   ["transport-belt"] = "metallurgy",
   ["underground-belt"] = "metallurgy",
@@ -221,6 +228,7 @@ local new_recipes_dict = {
   ["pump"] = "metallurgy",
   ["storage-tank"] = "metallurgy",
   ["barrel"] = "metallurgy",
+  ["pipe-to-ground"] = "metallurgy",
   -- heating and power
   ["heating-tower"] = "metallurgy",
   ["steam-engine"] = "metallurgy",
@@ -282,7 +290,13 @@ local mapping = {
   ["heat-pipe"] = "pressing",
   ["heat-exchanger"] = "pressing",
   -- mining
-  ["electric-mining-drill"] = "pressing",
+  ["burner-mining-drill"] = "pressing",
+  ["electric-mining-drill"] = "pressing",-- or "electronics",
+  -- production buildings
+  ["assembling-machine-1"] = "electronics",
+  ["assembling-machine-2"] = "electronics",
+  ["assembling-machine-3"] = "electronics",
+  ["electric-furnace"] = "pressing",
   -- intermediates
   ["engine-unit"] = "metallurgy-or-assembling", -- non-electric engine. no handcrafting
   ["electric-engine-unit"] = "electronics-or-assembling", -- electric engine
@@ -353,4 +367,4 @@ local mapping = {
   ["power-armor-mk2"] = "electronics",
   ["mech-armor"] = "electronics",
 }
-oc_helper.change_multiple_crafting_category(mapping)
+oc_recipe.change_multiple_crafting_category(mapping)

@@ -37,7 +37,8 @@ local new_recipes = {
 generator_api.batch_generator(new_recipes)
 
 data:extend({
-  { -- factorissimo-casting
+  -- factorissimo-casting tech
+  { -- casting factory 1
     type = "technology",
     name = "factory-casting-1",
     icons = {
@@ -64,7 +65,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "oc-casting-factory-1" }
     },
   },
-  {
+  { -- casting factory 2
     type = "technology",
     name = "factory-casting-2",
     icons = {
@@ -94,7 +95,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "oc-casting-factory-2" }
     },
   },
-  {
+  { -- casting factory 3
     type = "technology",
     name = "factory-casting-3",
     icons = {
@@ -126,7 +127,7 @@ data:extend({
       { type = "unlock-recipe", recipe = "oc-casting-factory-3" }
     },
   },
-  {
+  { -- casting space factory
     type = "technology",
     name = "factorissimo-casting-space-factory",
     icons = {
@@ -162,5 +163,5 @@ data:extend({
       --  { type = "unlock-recipe", recipe = "oc-casting-space-factory"
     },
     hidden = true,
-  }
+  },
 })
