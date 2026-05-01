@@ -276,11 +276,16 @@ local new_recipes_dict = {
   ["fluid-wagon"] = "metallurgy",
   ["car"] = "metallurgy",
   ["tank"] = "metallurgy",
+
+  -- Space
+  -- ["space-platform-hub"] = "metallurgy",
+  -- ["cargo-bay"] = "electromagnetics",
+  -- ["asteroid-collector"] = "electromagnetics",
 }
 generator_api.batch_generator(new_recipes_dict)
 
 -- change crafting category to allow foundry, EM-plant or whatever
-local mapping = {
+local category_mapping = {
   -- energy and fluid handling
   ["pump"] =  "pressing",
   ["offshore-pump"] =  "pressing",
@@ -337,6 +342,16 @@ local mapping = {
   ["switchbutton2"] = "electronics",
   -- logistics others
   ["foundation"] = "crafting-with-fluid-or-metallurgy", -- to cheaty?
+
+
+  -- Space
+  ["space-platform-hub"] = "electronics",
+  ["cargo-bay"] = "electronics",
+  ["asteroid-collector"] = "electronics",
+  ["crusher"] = "electronics",
+  ["thruster"] = "electronics",
+
+
   -- civil equipment
   ["toolbelt-equipment"] = "electronics",
   ["nightvision-equipment"] = "electronics",
@@ -367,4 +382,4 @@ local mapping = {
   ["power-armor-mk2"] = "electronics",
   ["mech-armor"] = "electronics",
 }
-oc_recipe.change_multiple_crafting_category(mapping)
+oc_recipe.change_multiple_crafting_category(category_mapping)

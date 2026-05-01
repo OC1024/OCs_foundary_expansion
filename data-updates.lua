@@ -30,3 +30,14 @@ end
 if mods["elevated-pipes"] then
     require("prototypes.compatibility.elevated-pipes")
 end
+
+if mods["lane-splitter"] then
+    require("prototypes.compatibility.lane-splitter")
+end
+
+if mods["space-panels"] then
+    require("prototypes.compatibility.space-panels")
+end
+if mods["Various_Asteroid_Grabbers"] or mods["Various_Cargo_Bays"] or mods["space_platform_hub"] then
+    require("prototypes.compatibility.various-grabber-and-cargo-bays")
+end

@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 2026-05-01
+  Compatibility:
+    - Updated dependecy of [OCs Base Assets] to >=0.4.3, where helper functions were updated. Also updated dependency of my other mods.
+    - Added simpel compatibility for [Lane Splitter], [Space Solar Panels], [Various Asteroid Grabber], [Various Cargo Bays], and [Space Platform Hub Mark 2].
+    - [Maraxsis] Readded electric motor unit back to the EM plant as a seprarate recipe.
+  Minor Features:
+    - Added setting to supress the raised fluid limit for (advanced) foundry (default=false). Especially handy for concrete-related recipes as it switches the molten-iron "back" into lava.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 2026-04-19
   Other:

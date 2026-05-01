@@ -27,10 +27,10 @@ local mapping = {
 oc_recipe.change_multiple_crafting_category(mapping)
 
 -- change my lithium recipe
-oc_recipe.replace_ingredient("forging-lithium-plate", "item", "lithium", "item", "kr-lithium", true)
+oc_recipe.replace_ingredient("forging-lithium-plate", "item", "lithium", "item", "kr-lithium")
 if mods["metall-and-stars"] then
   -- hotfix metal and stars lithium output
-  -- replace_result("mirandite-processing","item","lithium","item","kr-lithium",true)
+  -- replace_result("mirandite-processing","item","lithium","item","kr-lithium")
   -- just in case this didn't work
   -- add_result("mirandite-processing","item","kr-lithium",1)
   -- or we create a recipe to switch one to the other
