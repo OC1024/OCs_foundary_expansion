@@ -9,7 +9,7 @@ data.raw.item["space-solar-panel"].weight = 100 * kg
 local category_mapping = {
     ["space-solar-panel"] = "electronics",
 }
-oc_recipe.change_multiple_crafting_category(category_mapping)
+oc_recipe.add_multiple_crafting_category(category_mapping)
 
 local new_recipes = {
     ["space-solar-panel"] = "electromagnetics",

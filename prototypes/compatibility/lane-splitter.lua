@@ -3,12 +3,12 @@ local oc_tech = require("__OCs_base_assets__.prototypes.utils.oc_tech")
 local oc_recipe = require("__OCs_base_assets__.prototypes.utils.oc_recipe")
 
 local category_mapping = {
-    ["lane-splitter"] = "pressing",
-    ["fast-lane-splitter"] = "pressing",
-    ["express-lane-splitter"] = "metallurgy-or-crafting-with-fluid",
+    ["lane-splitter"] = "metallurgy",
+    ["fast-lane-splitter"] = "metallurgy",
+    ["express-lane-splitter"] = "metallurgy",
     ["turbo-lane-splitter"] = "metallurgy",
 }
-oc_recipe.change_multiple_crafting_category(category_mapping)
+oc_recipe.add_multiple_crafting_category(category_mapping)
 
 local new_recipes = {
     ["lane-splitter"] = "metallurgy",

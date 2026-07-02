@@ -3,13 +3,13 @@ local oc_tech = require("__OCs_base_assets__.prototypes.utils.oc_tech")
 local oc_recipe = require("__OCs_base_assets__.prototypes.utils.oc_recipe")
 
 local category_mapping = {
-    ["octopus-asteroid-collector"] = "electronics",
-    ["eel-asteroid-collector"] = "electronics",
-    ["storage-cargo-bay"] = "electronics",
-    ["hatch-cargo-bay"] = "electronics",
-    ["space-platform-starter-pack-two"] = "electronics",
+    ["octopus-asteroid-collector"] = "electromagnetics",
+    ["eel-asteroid-collector"] = "electromagnetics",
+    ["storage-cargo-bay"] = "electromagnetics",
+    ["hatch-cargo-bay"] = "electromagnetics",
+    ["space-platform-starter-pack-two"] = "electromagnetics",
 }
-oc_recipe.change_multiple_crafting_category(category_mapping)
+oc_recipe.add_multiple_crafting_category(category_mapping)
 
 --these recipes feel less useful. Just making them electronics is probably good enough.
 local new_recipes = {

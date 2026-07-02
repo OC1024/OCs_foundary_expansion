@@ -11,4 +11,6 @@ if not settings.startup["supress-extra-fluid-limit"].value then
   }
   generator_api.register_machine_fluid_limits(machine_fluid_limits)
   log("late rules change for advanced foundry")
+else
+  log("supress-extra-fluid-limit is enabled, skipping late rules change for advanced foundry. Should now be 2.")
 end

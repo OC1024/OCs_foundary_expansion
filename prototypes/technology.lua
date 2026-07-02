@@ -56,7 +56,7 @@ local recipe_unlocks = {
   ["oc-pulse-big-electric-pole"] = "electric-energy-distribution-1",
   ["oc-pulse-substation"] = "electric-energy-distribution-2",
   ["oc-pulse-solar-panel"] = { "solar-energy" },
-  -- ["oc-pulse-accumulator"] = {"electric-energy-accumulator"}, -- useless as the battery is chemistry
+  ["oc-pulse-accumulator"] = {"electric-energy-accumulator"}, -- useless as the battery is chemistry. "fixed" that
 
   -- fluid handling
   ["oc-casting-offshore-pump"] = { "foundry" },

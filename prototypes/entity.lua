@@ -2,6 +2,8 @@ require ("__base__.prototypes.entity.pipecovers") -- for pipe covers
 local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
 local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
+require ("__space-age__.prototypes.entity.circuit-network")
+require ("circuit-connector-sprites")
 
 data:extend({
   { -- advanced foundry
@@ -19,11 +21,13 @@ data:extend({
     max_health = 640, -- 350 for normal foundry
     corpse = "foundry-remnants",
     dying_explosion = "foundry-explosion",
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["foundry"],
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}}, -- 7x7 building
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     -- collision_box = {{-3.7, -3.7}, {3.7, 3.7}}, -- 8x8 building
     -- selection_box = {{-4, -4}, {4, 4}},
-    crafting_categories = {"metallurgy", "crafting-with-fluid-or-metallurgy", "metallurgy-or-assembling"}, -- no pressing
+    crafting_categories = {"metallurgy"}, -- no crafting
     crafting_speed = 8, -- 4 for normal foundry
     energy_source = {
         type = "electric",
@@ -197,9 +201,9 @@ data:extend({
 })
 if data.raw["recipe-category"]["metallurgy-or-quality-assembling"] then
   table.insert(crafting_categories, "metallurgy-or-quality-assembling")
-  log("crafting_categories updated with 'metallurgy-or-quality-assembling'. IDK wich mod it was")
+  log("crafting_categories updated with 'metallurgy-or-quality-assembling'. IDK which mod it was")
 end
 if data.raw["recipe-category"]["metallurgy-or-assembling-or-quality-assembling"] then
   table.insert(crafting_categories, "metallurgy-or-assembling-or-quality-assembling")
-  log("crafting_categories updated with 'metallurgy-or-assembling-or-quality-assembling'. IDK wich mod it was")
+  log("crafting_categories updated with 'metallurgy-or-assembling-or-quality-assembling'. IDK which mod it was")
 end

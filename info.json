@@ -1,24 +1,25 @@
 {
   "name": "OCs_foundary_expansion",
-  "version": "0.5.5",
+  "version": "0.6.0",
   "title": "OCs Foundry Expansion",
   "author": "OC1024",
   "space_travel_required": true,
   "description": "This will be the modpack and extra stuff for all of the OC mods. Work in progress. It adds many recipes to the foundry or EM-plant.",
-  "factorio_version": "2.0",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0",
+    "base >= 2.1.7",
     "space-age",
-    "OCs_base_assets >= 0.4.3",
-    "OCs_ammo_casting >= 0.9.4",
-    "OCs_stone_casting >=0.8.9",
-    "? OCs_alt_sciences >= 0.2.1",
-    "? OCs_nauvis_science_ports >= 0.1.1",
-    "? aai-containters >=0.3.1",
+    "OCs_base_assets >= 0.5.0",
+    "OCs_ammo_casting >= 0.10.0",
+    "OCs_stone_casting >=0.9.0",
+    "+ OCs_alt_sciences >= 0.3.0",
+    "+ OCs_nauvis_science_ports >= 0.2.0",
+    "? aai-containers >=0.3.1",
+    "? elevated-pipes",
+    "? factorissimo-2-notnotmelon",
+    "? metal-and-stars",
     "? aai-industry >= 0.6.0",
     "? Krastorio2-spaced-out >= 1.4.0",
-    "? metal-and-stars",
-    "? elevated-pipes",
-    "? factorissimo-2-notnotmelon"
+    "? planet-muluna"
   ]
 }

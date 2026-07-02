@@ -46,11 +46,11 @@ local category_remapping = {}
 
 for _, box in ipairs(aai_boxes) do
   for _, logi in ipairs(logistic_names) do
-    category_remapping[box .. "-" .. logi] = "electronics"
+    category_remapping[box .. "-" .. logi] = "electromagnetics"
   end
-  category_remapping[box] = "pressing"
+  category_remapping[box] = "metallurgy"
 end
-oc_recipe.change_multiple_crafting_category(category_remapping)
+oc_recipe.add_multiple_crafting_category(category_remapping)
 
 
 local new_recipes = {
