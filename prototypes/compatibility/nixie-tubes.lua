@@ -5,4 +5,4 @@ local mapping = {
   ["nixie-tube-alpha"] = "electromagnetics",
   ["nixie-tube-small"] = "electromagnetics",
 }
-oc_recipe.change_multiple_crafting_category(mapping)
+oc_recipe.add_multiple_crafting_category(mapping)
