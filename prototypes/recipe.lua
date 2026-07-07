@@ -18,7 +18,7 @@ data:extend({
         icon_mipmaps = 4,
       }
     },
-    categories = {"metallurgy"},
+    categories = { "metallurgy" },
     enabled = false,
     hide_from_player_crafting = true,
     energy_required = 6.4,
@@ -45,7 +45,7 @@ data:extend({
         icon_mipmaps = 4,
       }
     },
-    categories = {"cryogenics"},
+    categories = { "cryogenics" },
     subgroup = "fluid-recipes",
     order = "d[other-chemistry]-d[water-freezing]",
     enabled = false, -- either free or with "cryogenic-plant"
@@ -53,9 +53,11 @@ data:extend({
     energy_required = 1,
     ingredients = {
       { type = "fluid", name = "water", amount = 20 },
+      -- { tpye = "fluid", name = "fluoroketone-cold", amount = 10},
     },
     results = {
-      { type = "item", name = "ice", amount = 1 }
+      { type = "item", name = "ice", amount = 1 },
+      -- { tpye = "fluid", name = "fluoroketone-hot", amount = 10, ignored_by_stats = 10 },
     },
     allow_productivity = false,
     allow_decomposition = false,
@@ -65,43 +67,46 @@ data:extend({
 
 data:extend({
   --[[
-  -- { -- LDS space platform
-  --   type = "recipe",
-  --   name = "lds-space-platform-foundation",
-  --   categories = { "metallurgy", "crafting-with-fluid" }
-  --   subgroup = "space-related",
-  --   order = "a[space-platform-foundation]-b[lds]",
-  --   icons = {
-  --     {
-  --       icon = "__space-age__/graphics/icons/space-platform-foundation.png",
-  --       icon_size = 64,
-  --       icon_mipmaps = 4,
-  --     },
-  --     {
-  --       icon = "__base__/graphics/icons/light-density-structure.png",
-  --       icon_size = 64,
-  --       icon_mipmaps = 4,
-  --       icon_scale = 0.5,
-  --       icon_shift = {8,8},
-  --     }
-  --   },
-  --   enabled = false,
-  --   energy_required = 20,
-  --   ingredients = {
-  --     {type = "item", name = "low-density-structure", amount = 1},
-  --     {type = "item", name = "steel-plate", amount = 20},
-  --   },
-  --   results = {
-  --     {type = "item", name = "space-platform-foundation", amount = 2}
-  --   },
-  -- },
+  { -- LDS space platform
+    type = "recipe",
+    name = "lds-space-platform-foundation",
+    categories = { "metallurgy", "crafting-with-fluid" },
+    subgroup = "space-related",
+    order = "a[space-platform-foundation]-b[lds]",
+    icons = {
+      {
+        icon = "__space-age__/graphics/icons/space-platform-foundation.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+      },
+      {
+        icon = "__base__/graphics/icons/low-density-structure.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        scale = 0.25,
+        shift = { 8, 8 },
+      }
+    },
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+      { type = "item", name = "low-density-structure", amount = 1 }, -- 1lds = 2steel-plate + 5plastic-bar + 20copper-plate
+      { type = "item", name = "steel-plate",           amount = 20 },
+    },
+    results = {
+      { type = "item", name = "space-platform-foundation", amount = 2 } -- 1spf = 20copper-cable + 20steel-plate
+    },
+    allow_productivity = false,
+    allow_decomposition = false,
+    auto_recycle = false,
+  },
   --]]
   { -- LDS+tungsten space platform foundation
     type = "recipe",
     name = "tungsten-space-platform-foundation",
     categories = { "crafting-with-fluid", "metallurgy" },
-    -- subgroup = "space-related",
-    -- order = "a[space-platform-foundation]-c[tungsten]",
+    subgroup = "space-related",
+    order = "a[space-platform-foundation]-c[tungsten]",
     icons = {
       {
         icon = "__space-age__/graphics/icons/space-platform-foundation.png",
@@ -123,11 +128,12 @@ data:extend({
     results = {
       { type = "item", name = "space-platform-foundation", amount = 2 }
     },
-    allow_decomposition = false,
     allow_productivity = false,
+    allow_decomposition = false,
     auto_recycle = false,
     -- show_amount_in_title = false,
   },
+  --[[--automatically generated: normal SPF
   { -- casting normal space platform foundation
     type = "recipe",
     name = "oc-casting-space-platform-foundation",
@@ -164,9 +170,10 @@ data:extend({
     allow_productivity = false,
     auto_recycle = false,
   },
+  -- ]]
 })
 
- -- buildings
+-- buildings
 data:extend({
   { -- advanced-foundry"
     type = "recipe",
@@ -221,12 +228,10 @@ local category_mapping = {
   ["assembling-machine-3"] = { "electromagnetics" },
   ["electric-furnace"] = { "metallurgy" },
   -- intermediates
-  ["engine-unit"] = { "metallurgy" },  -- non-electric engine. no handcrafting
+  ["engine-unit"] = { "metallurgy" },                -- non-electric engine. no handcrafting
   ["electric-engine-unit"] = { "electromagnetics" }, -- electric engine
   -- ["lithium-plate"] = "metallurgy-or-smelting", -- category does not exist
-  ["battery"] = {"electromagnetics"}, -- cheesy such that akkumulator can be directly crafted in EMplant, too
-  -- space
-  ["space-platform-foundation"] = { "metallurgy" },
+  ["battery"] = { "electromagnetics" },              -- cheesy such that akkumulator can be directly crafted in EMplant, too
   -- logistics - robots
   ["roboport"] = { "electromagnetics" },
   ["flying-robot-frame"] = { "electromagnetics" },
@@ -264,6 +269,8 @@ local category_mapping = {
 
 
   -- Space
+  -- ["space-platform-foundation"] = { "metallurgy" }, -- just use the casting recipe
+  -- ["tungsten-space-platform"] = { "metallurgy"}, -- just use the casting recipe
   ["space-platform-hub"] = { "electromagnetics" },
   ["cargo-bay"] = { "electromagnetics" },
   ["landing-pad-unloading-bay"] = { "electromagnetics" },
@@ -367,12 +374,9 @@ local new_recipes_dict = {
   ["engine-unit"] = "metallurgy",
   ["electric-engine-unit"] = "electromagnetics",
   -- space related
-  -- ["space-platform-foundation"] = "metallurgy", -- manually created because same item is casted differently
+  ["space-platform-foundation"] = "metallurgy",
+  -- ["lds-space-platform-foundation"] = "metallurgy", -- less useful than I think
   ["tungsten-space-platform-foundation"] = "metallurgy",
-  -- testing
-  -- ["coal-liquefaction"] = "oil-refining", -- should be blacklisted by category
-  -- ["plastic-bar"] = "chemistry", -- blacklisted by item and/or category
-  -- ["solid-fuel-from-light-oil"] = "crafting-with-fluid", -- blacklisted by ingredients
 
   -- vehicles
   ["locomotive"] = "metallurgy",

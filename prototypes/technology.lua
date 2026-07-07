@@ -44,28 +44,29 @@ local recipe_unlocks = {
   ["oc-pulse-assembling-machine-2"] = "automation-2",
   ["oc-pulse-assembling-machine-3"] = "automation-3",
   -- energy production
-  ["oc-casting-steam-engine"] = { "foundry" },
+  ["oc-casting-steam-engine"] = { "steam-power" },
   ["oc-casting-heat-pipe"] = { "nuclear-power", "heating-tower" },
   ["oc-casting-heat-exchanger"] = { "nuclear-power", "heating-tower" },
   ["oc-casting-steam-turbine"] = { "nuclear-power", "heating-tower" },
-  ["oc-casting-boiler"] = { "foundry" },
+  ["oc-casting-boiler"] = { "steam-power" },
   ["oc-casting-heating-tower"] = { "heating-tower" },
   -- energy distribution
   ["oc-pulse-small-electric-pole"] = "electromagnetic-plant",
-  ["oc-pulse-medium-electric-pole"] = "electric-energy-distribution-1",   -- change that with aai-industry to "medium-electric-pole"
+  ["oc-pulse-medium-electric-pole"] = "electric-energy-distribution-1", -- change that with aai-industry to "medium-electric-pole"
   ["oc-pulse-big-electric-pole"] = "electric-energy-distribution-1",
   ["oc-pulse-substation"] = "electric-energy-distribution-2",
   ["oc-pulse-solar-panel"] = { "solar-energy" },
-  ["oc-pulse-accumulator"] = {"electric-energy-accumulator"}, -- useless as the battery is chemistry. "fixed" that
+  ["oc-pulse-accumulator"] = { "electric-energy-accumulator" }, -- useless as the battery is chemistry. "fixed" that
 
   -- fluid handling
   ["oc-casting-offshore-pump"] = { "foundry" },
   ["oc-casting-pump"] = { "fluid-handling" },
   ["oc-casting-storage-tank"] = { "fluid-handling" },
   ["oc-casting-barrel"] = { "fluid-handling" },
+  ["oc-casting-pipe-to-ground"] = { "foundry" },
   -- item storage
   ["oc-casting-iron-chest"] = { "foundry" },
-  ["oc-casting-steel-chest"] = { "foundry" },
+  ["oc-casting-steel-chest"] = { "steel-processing" },
   -- logistics - belts
   ["oc-casting-transport-belt"] = { "logistics" },
   ["oc-casting-underground-belt"] = { "logistics" },
@@ -82,15 +83,16 @@ local recipe_unlocks = {
   -- logistics - bots
 
   -- intermediates
-  ["oc-casting-engine-unit"] = "foundry",
+  ["oc-casting-engine-unit"] = "engine",
   ["oc-pulse-electric-engine-unit"] = "electric-engine",
-  ["forging-lithium-plate"] = "lithium-processing",   -- manually created
-  ["freezing-water"] = "cryogenic-plant",             -- manually created
+  ["forging-lithium-plate"] = "lithium-processing", -- manually created
+  ["freezing-water"] = "cryogenic-plant",           -- manually created
 
   -- space platform
-  -- ["lds-space-platform-foundation"] = {"rocket-silo"},
+  ["lds-space-platform-foundation"] = {"rocket-silo"},
   ["oc-casting-space-platform-foundation"] = { "rocket-silo" },
   ["tungsten-space-platform-foundation"] = { "rocket-silo" },
+  ["oc-casting-lds-space-platform-foundation"] = { "rocket-silo" },
   ["oc-casting-tungsten-space-platform-foundation"] = { "rocket-silo" },
 
   -- vehicles

@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 2026-07-07
+  Compatibility:
+    - Updated dependency of [OCs Base Assets] to >=0.5.2.
+    - Updated dependency of [OCs Ammo Casting] to >=0.10.1.
+    - Updated dependency of [OCs Stone Casting] to >=0.9.1.
+  Balancing:
+    - Fixed casting space platform foundation recipe from 100 molten copper to 50 molten copper. Removed normal recipe from foundry, use casting recipe instead!
+    - Shifted casting engine unit unlock to the engine unit tech. Previously unlocked by foundry.
+    - Shifted casting steel chest unlock to the steel processing tech. Previously unlocked by foundry.
+    - Shifted both casting of boiler and steam engine to the steam power tech. Previously unlocked by foundry.
+  Bugfixes:
+    - Direct casting of underground pipes unlocked by foundry. (unlockable before)
+  Bonus:
+    - Sulfur from sulfuric acid for Vulcanus-starts with [Any Planet Start] or [Planet Picker 2.1 Patch].
+---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 2026-07-02
   Major Features:
@@ -6,7 +22,7 @@ Date: 2026-07-02
   Minor Features:
     - Adding circuit connection to the advanced foundry.
   Bugfixes:
-    - Fixed incorrect spelling of [aai-containers] mot in the info file, optional dependency now fixed.
+    - Fixed incorrect spelling of [aai-containers] mod in the info file, optional dependency now fixed.
   Compatibility:
     - Updated dependency of [OCs Base Assets] to >=0.5.0, where helper functions were updated.
     - Updated dependency of [OCs Ammo Casting] to >=0.10.0.
