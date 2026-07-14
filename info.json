@@ -1,10 +1,10 @@
 {
   "name": "OCs_foundary_expansion",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "title": "OCs Foundry Expansion",
   "author": "OC1024",
   "space_travel_required": true,
-  "description": "This will be the modpack and extra stuff for all of the OC mods. Work in progress. It adds many recipes to the foundry or EM-plant.",
+  "description": "This will be the modpack and extra stuff for all of the OC mods. It adds many recipes to the foundry or EM-plant.",
   "factorio_version": "2.1",
   "dependencies": [
     "base >= 2.1",

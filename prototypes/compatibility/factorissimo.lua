@@ -43,7 +43,7 @@ data:extend({
     name = "factory-casting-1",
     icons = {
       {
-        icon = "__OCs_base_assets__/graphics/technology/overlayer-tech-lava-droplet.png",
+        icon = "__OCs_base_assets__/graphics/technology/overlayer-tech-lava.png",
         icon_size = 256,
         icon_mipmaps = 4,
       },
@@ -70,7 +70,7 @@ data:extend({
     name = "factory-casting-2",
     icons = {
       {
-        icon = "__OCs_base_assets__/graphics/technology/overlayer-tech-lava-droplet.png",
+        icon = "__OCs_base_assets__/graphics/technology/overlayer-tech-lava.png",
         icon_size = 256,
         icon_mipmaps = 4,
       },
@@ -100,7 +100,7 @@ data:extend({
     name = "factory-casting-3",
     icons = {
       {
-        icon = "__OCs_base_assets__/graphics/technology/overlayer-tech-lava-droplet.png",
+        icon = "__OCs_base_assets__/graphics/technology/overlayer-tech-lava.png",
         icon_size = 256,
         icon_mipmaps = 4,
       },

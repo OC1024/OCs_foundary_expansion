@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.3
+Date: 2026-07-14
+  Bugfixes:
+    - Fixed incorrect icon path for [Factorissimo] compatiblility. Thanks to VoldyTheMoldy.
+  Minor Features:
+    - Recycler is now craftable in the EM plant, too.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 2026-07-07
   Bugfixes:

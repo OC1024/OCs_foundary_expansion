@@ -222,6 +222,7 @@ local category_mapping = {
   -- mining
   ["burner-mining-drill"] = { "metallurgy" },
   ["electric-mining-drill"] = { "metallurgy" }, -- or {"electromagnetics"}
+  ["recycler"] = { "electromagnetics" },
   -- production buildings
   ["assembling-machine-1"] = { "electromagnetics" },
   ["assembling-machine-2"] = { "electromagnetics" },
