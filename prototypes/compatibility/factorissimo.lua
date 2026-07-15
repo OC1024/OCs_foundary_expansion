@@ -132,7 +132,7 @@ data:extend({
     name = "factorissimo-casting-space-factory",
     icons = {
       {
-        icon = "__OCs_base_assets__/graphics/technology/overlayer-tech-lava-droplet.png",
+        icon = "__OCs_base_assets__/graphics/technology/overlayer-tech-lava.png",
         icon_size = 256,
         icon_mipmaps = 4,
       },

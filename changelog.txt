@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: 2026-07-15
+  Bugfixes:
+    - Finally fixed all incorrect icon path for [Factorissimo] compatiblility. Sorry to VoldyTheMoldy.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 2026-07-14
   Bugfixes:
