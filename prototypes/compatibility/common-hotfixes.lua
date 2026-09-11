@@ -51,6 +51,7 @@ end
 if not vulcanus and mods["planet-picker"] then
   vulcanus = settings.startup["oc-pp-vulcanus"].value
 end
+
 -- in either case, extra patch recipe for lazy OC
 if vulcanus then
   data:extend({
@@ -68,7 +69,7 @@ if vulcanus then
           icon_size = 64,
           icon_mipmaps = 4,
           scale = 0.25,
-          shift = { 8, 8 },
+          shift = { -8, 0 },
         }
       },
       categories = { "chemistry", "cryogenics" },
@@ -88,7 +89,7 @@ if vulcanus then
       allow_decomposition = false,
       hide_from_player_crafting = true,
       crafting_machine_tint = {
-        -- compied from sulfuri acid
+        -- compied from sulfuric acid
         primary = { r = 1.000, g = 0.958, b = 0.000, a = 1.000 },    -- #fff400ff
         secondary = { r = 1.000, g = 0.852, b = 0.172, a = 1.000 },  -- #ffd92bff
         tertiary = { r = 0.876, g = 0.869, b = 0.597, a = 1.000 },   -- #dfdd98ff
@@ -97,4 +98,9 @@ if vulcanus then
     }
   })
   oc_tech.add_recipe_unlocks({ ["sulfur-from-sulfuric-acid"] = { "sulfur-processing" } })
+end
+
+-- Vulcanus Steam turbine
+if mods["CalciteProcessingUnlocksSteamTurbine"] then
+  oc_tech.add_recipe_unlocks({ ["oc-casting-steam-turbine"] = "calcite-processing" })
 end

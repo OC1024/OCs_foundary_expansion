@@ -1,6 +1,6 @@
 {
   "name": "OCs_foundary_expansion",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "title": "OCs Foundry Expansion",
   "author": "OC1024",
   "space_travel_required": true,
@@ -9,7 +9,7 @@
   "dependencies": [
     "base >= 2.1",
     "space-age",
-    "OCs_base_assets >= 0.5.2",
+    "OCs_base_assets >= 0.5.5",
     "OCs_ammo_casting >= 0.10.1",
     "OCs_stone_casting >=0.9.1",
     "+ OCs_alt_sciences >= 0.3.0",

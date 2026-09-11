@@ -1,2 +1,1 @@
-
-require("prototypes.compatibility.common-hotfixes") -- does not quite work
+require("prototypes.compatibility.common-hotfixes")
