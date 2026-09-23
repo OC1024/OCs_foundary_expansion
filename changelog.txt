@@ -1,9 +1,14 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.6.5
+Version: 0.7.0
 Date: 2026-09-04-wip
   Compatibility:
-    - [Vulcanus Steam turbine] compatibility added
+    - [Vulcanus Steam turbine] compatibility added.
     - [Advanced Electric Revamped] pulse ultimative accumulator/solar recipe now is a bit better in terms of fluids.
+    - Updated dependencies of [OCs Base Assets], [OCs Ammo and Armor], and [OCs Stone Casting].
+  Changes:
+    - Pushed casting car and tank to the [OCs Ammo and Armor] mod. It is now optional with.
+  Bugfixes:
+    - Pulsing lamps was impossible to unlock. It is now unlocked with lamps.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 2026-07-15

@@ -209,7 +209,7 @@ data:extend({
   },
 })
 
--- change crafting category to allow foundry, EM-plant or whatever
+-- change crafting categories to allow foundry, EM-plant or whatever
 local category_mapping = {
   -- energy and fluid handling
   ["pump"] = { "metallurgy" },
@@ -227,11 +227,11 @@ local category_mapping = {
   ["assembling-machine-1"] = { "electromagnetics" },
   ["assembling-machine-2"] = { "electromagnetics" },
   ["assembling-machine-3"] = { "electromagnetics" },
-  ["electric-furnace"] = { "metallurgy" },
+  ["electric-furnace"] = { "metallurgy" }, -- since the other furnaces are also metallurgy, introduced by [OCs lava casting].
   -- intermediates
   ["engine-unit"] = { "metallurgy" },                -- non-electric engine. no handcrafting
   ["electric-engine-unit"] = { "electromagnetics" }, -- electric engine
-  -- ["lithium-plate"] = "metallurgy-or-smelting", -- category does not exist
+  ["lithium-plate"] = { "metallurgy", "smelting" },  -- category does not exist
   ["battery"] = { "electromagnetics" },              -- cheesy such that akkumulator can be directly crafted in EMplant, too
   -- logistics - robots
   ["roboport"] = { "electromagnetics" },
@@ -312,7 +312,6 @@ local category_mapping = {
 }
 oc_recipe.add_multiple_crafting_category(category_mapping)
 
-
 -- create new recipes for foundry, EMplant, etc.
 local new_recipes_dict = {
   ["lab"] = "electromagnetics",
@@ -383,8 +382,6 @@ local new_recipes_dict = {
   ["locomotive"] = "metallurgy",
   ["cargo-wagon"] = "metallurgy",
   ["fluid-wagon"] = "metallurgy",
-  ["car"] = "metallurgy",
-  ["tank"] = "metallurgy",
 
   -- Space
   -- ["space-platform-hub"] = "metallurgy",

@@ -57,6 +57,7 @@ local recipe_unlocks = {
   ["oc-pulse-substation"] = "electric-energy-distribution-2",
   ["oc-pulse-solar-panel"] = { "solar-energy" },
   ["oc-pulse-accumulator"] = { "electric-energy-accumulator" }, -- useless as the battery is chemistry. "fixed" that
+  ["oc-pulse-small-lamp"] = {"lamp"},
 
   -- fluid handling
   ["oc-casting-offshore-pump"] = { "foundry" },
@@ -81,6 +82,8 @@ local recipe_unlocks = {
   ["oc-casting-turbo-underground-belt"] = { "turbo-transport-belt" },
   ["oc-casting-turbo-splitter"] = { "turbo-transport-belt" },
   -- logistics - bots
+  -- other buildings
+  ["oc-pulse-radar"] = "radar",
 
   -- intermediates
   ["oc-casting-engine-unit"] = "engine",
@@ -99,7 +102,5 @@ local recipe_unlocks = {
   ["oc-casting-locomotive"] = { "railway" },
   ["oc-casting-cargo-wagon"] = { "railway" },
   ["oc-casting-fluid-wagon"] = { "fluid-wagon" },
-  ["oc-casting-car"] = { "automobilism" },
-  ["oc-casting-tank"] = { "tank" },
 }
 oc_tech.add_recipe_unlocks(recipe_unlocks)
