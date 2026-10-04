@@ -5,6 +5,7 @@ Date: 2026-09-04-wip
     - [Vulcanus Steam turbine] compatibility added.
     - [Advanced Electric Revamped] pulse ultimative accumulator/solar recipe now is a bit better in terms of fluids.
     - Updated dependencies of [OCs Base Assets], [OCs Ammo and Armor], and [OCs Stone Casting].
+    - [BZ Lead] compatibility moved from [OCs Ammo and Armor] to here. Lead ammo casting recipes are still in the other mod.
   Changes:
     - Pushed casting car and tank to the [OCs Ammo and Armor] mod. It is now optional with.
   Bugfixes:

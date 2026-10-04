@@ -8,7 +8,7 @@ local category_mapping = {
     ["express-lane-splitter"] = "metallurgy",
     ["turbo-lane-splitter"] = "metallurgy",
 }
-oc_recipe.add_multiple_crafting_category(category_mapping)
+oc_recipe.add_crafting_categories(category_mapping)
 
 local new_recipes = {
     ["lane-splitter"] = "metallurgy",

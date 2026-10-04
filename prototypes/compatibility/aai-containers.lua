@@ -50,7 +50,7 @@ for _, box in ipairs(aai_boxes) do
   end
   category_remapping[box] = "metallurgy"
 end
-oc_recipe.add_multiple_crafting_category(category_remapping)
+oc_recipe.add_crafting_categories(category_remapping)
 
 
 local new_recipes = {

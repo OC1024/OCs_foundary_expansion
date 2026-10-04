@@ -105,7 +105,7 @@ data:extend({
     type = "recipe",
     name = "tungsten-space-platform-foundation",
     categories = { "crafting-with-fluid", "metallurgy" },
-    subgroup = "space-related",
+    subgroup = "space-platform",
     order = "a[space-platform-foundation]-c[tungsten]",
     icons = {
       {
@@ -310,7 +310,7 @@ local category_mapping = {
   ["power-armor-mk2"] = { "electromagnetics" },
   ["mech-armor"] = { "electromagnetics" },
 }
-oc_recipe.add_multiple_crafting_category(category_mapping)
+oc_recipe.add_crafting_categories(category_mapping)
 
 -- create new recipes for foundry, EMplant, etc.
 local new_recipes_dict = {

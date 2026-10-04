@@ -9,7 +9,7 @@ local category_mapping = {
     ["hatch-cargo-bay"] = "electromagnetics",
     ["space-platform-starter-pack-two"] = "electromagnetics",
 }
-oc_recipe.add_multiple_crafting_category(category_mapping)
+oc_recipe.add_crafting_categories(category_mapping)
 
 --these recipes feel less useful. Just making them electronics is probably good enough.
 local new_recipes = {

@@ -26,7 +26,7 @@ local mapping = {
   ["kr-fusion-reactor-equipment"] = "electromagnetics",
   ["kr-antimatter-reactor-equipment"] = "electromagnetics",
 }
-oc_recipe.add_multiple_crafting_category(mapping)
+oc_recipe.add_crafting_categories(mapping)
 
 -- change my lithium recipe
 oc_recipe.replace_ingredient("forging-lithium-plate", "item", "lithium", "item", "kr-lithium")

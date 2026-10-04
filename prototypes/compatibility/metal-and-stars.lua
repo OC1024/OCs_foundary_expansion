@@ -6,4 +6,4 @@ local mapping = {
   ["antimatter-logistic-bot"] = "electromagnetics",
   ["antimatter-construction-bot"] = "electromagnetics",
 }
-oc_recipe.add_multiple_crafting_category(mapping)
+oc_recipe.add_crafting_categories(mapping)

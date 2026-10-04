@@ -14,7 +14,7 @@ local mapping = {
     ["burner-lab"] = "electromagnetics", -- instead "crafting"
     ["burner-turbine"] = "electromagnetics", -- instead "crafting"
 }
-oc_recipe.add_multiple_crafting_category(mapping)
+oc_recipe.add_crafting_categories(mapping)
 
 local new_recipes = {
     ["motor"] = "metallurgy",-- small motor
