@@ -5,14 +5,14 @@ local oc_helper = require("__OCs_base_assets__.prototypes.utils.helper")
 
 local mapping = {
     ["engine-unit"] = "metallurgy",
-    ["motor"] = "metallurgy", -- instead "crafting"
+    ["motor"] = "metallurgy",
     ["electric-motor"] = "electromagnetics",
     ["small-iron-electric-pole"] = "electromagnetics",
-    ["area-mining-drill"] = "metallurgy", -- instead "crafting"
-    ["industrial-furnace"] = "metallurgy", -- instead "crafting"
-    ["burner-assembling-machine"] = "electromagnetics", -- instead "crafting"
-    ["burner-lab"] = "electromagnetics", -- instead "crafting"
-    ["burner-turbine"] = "electromagnetics", -- instead "crafting"
+    ["area-mining-drill"] = "metallurgy",
+    ["industrial-furnace"] = "metallurgy",
+    ["burner-assembling-machine"] = "electromagnetics",
+    ["burner-lab"] = "electromagnetics",
+    ["burner-turbine"] = "electromagnetics",
 }
 oc_recipe.add_crafting_categories(mapping)
 
@@ -21,7 +21,7 @@ local new_recipes = {
     ["engine-unit"] = "metallurgy", -- overwrite vanilla recipe and icon
     ["electric-motor"] = "electromagnetics",--  electric motor
     ["electric-engine-unit"] = "electromagnetics", -- overwrite vanilla electric motor
-    ["electronic-circuit-wood"] = "electromagnetics", -- doesn't work without redefining the alt recipe order
+    ["electronic-circuit-wood"] = "electromagnetics",
     ["small-iron-electric-pole"] = "electromagnetics",
     ["burner-turbine"] = "electromagnetics",
     ["area-mining-drill"] = "metallurgy",
@@ -34,7 +34,7 @@ generator_api.batch_generator(new_recipes)
 local recipe_unlock_mapping = {
     ["oc-casting-motor"] = {"foundry"},
     ["oc-pulse-electric-motor"] = {"electricity"},
-    -- ["oc-pulse-electronic-circuit-wood"] = "electronics", -- see above
+    ["oc-pulse-electronic-circuit"] = "electronics",
     ["oc-pulse-small-iron-electric-pole"] = {"electricity"},
     ["oc-pulse-burner-turbine"] = "electricity",
     ["oc-pulse-electronic-circuit-wood"] = "electronics",

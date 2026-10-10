@@ -62,10 +62,7 @@ data:extend({
     allow_productivity = false,
     allow_decomposition = false,
     auto_recycle = false,
-  }
-})
-
-data:extend({
+  },
   --[[
   { -- LDS space platform
     type = "recipe",
@@ -279,36 +276,6 @@ local category_mapping = {
   ["crusher"] = { "electromagnetics" },
   ["thruster"] = { "electromagnetics" },
 
-
-  -- civil equipment
-  ["toolbelt-equipment"] = { "electromagnetics" },
-  ["nightvision-equipment"] = { "electromagnetics" },
-  ["exoskeleton-equipment"] = { "electromagnetics" },
-  ["personal-roboport-equipment"] = { "electromagnetics" },
-  ["personal-roboport-mk2-equipment"] = { "electromagnetics" },
-  ["solar-panel-equipment"] = { "electromagnetics" },
-  ["fission-reactor-equipment"] = { "electromagnetics" },
-  ["fusion-reactor-equipment"] = { "electromagnetics" },
-  ["battery-equipment"] = { "electromagnetics" },
-  ["battery-mk2-equipment"] = { "electromagnetics" },
-  ["battery-mk3-equipment"] = { "electromagnetics" },
-  -- military equipment
-  ["laser-turret"] = { "electromagnetics" },
-  ["discharge-defence-equipment"] = { "electromagnetics" },
-  ["energy-shield-equipment"] = { "electromagnetics" },
-  ["energy-shield-mk2-equipment"] = { "electromagnetics" },
-  ["personal-laser-defense-equipment"] = { "electromagnetics" },
-  -- battle bots
-  ["defender-capsule"] = { "electromagnetics" },
-  ["distractor-capsule"] = { "electromagnetics" },
-  ["destroyer-capsule"] = { "electromagnetics" },
-  -- armor
-  ["light-armor"] = { "metallurgy" },
-  ["heavy-armor"] = { "metallurgy" },
-  ["modular-armor"] = { "electromagnetics" },
-  ["power-armor"] = { "electromagnetics" },
-  ["power-armor-mk2"] = { "electromagnetics" },
-  ["mech-armor"] = { "electromagnetics" },
 }
 oc_recipe.add_crafting_categories(category_mapping)
 
@@ -354,7 +321,7 @@ local new_recipes_dict = {
   ["big-electric-pole"] = "electromagnetics",
   ["substation"] = "electromagnetics",
   ["solar-panel"] = "electromagnetics",
-  ["accumulator"] = "electromagnetics", -- useless as the battery is chemistry. "fixed" that
+  ["accumulator"] = "electromagnetics",
   -- logistics - combinators
   ["small-lamp"] = "electromagnetics",
   ["arithmetic-combinator"] = "electromagnetics",
@@ -364,8 +331,6 @@ local new_recipes_dict = {
   ["power-switch"] = "electromagnetics",
   ["programmable-speaker"] = "electromagnetics",
   ["display-panel"] = "electromagnetics",
-  -- other buildings
-  ["radar"] = "electromagnetics",
   -- item storage
   ["iron-chest"] = "metallurgy",
   ["steel-chest"] = "metallurgy",

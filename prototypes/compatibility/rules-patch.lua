@@ -2,7 +2,7 @@
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
 
 local spf_alternatives = {
-  [40] = "lds-space-platform-foundation",--better or worse than standard?
+  [40] = "lds-space-platform-foundation", -- better or worse than standard?
   [20] = "space-platform-foundation",
   [10] = "tungsten-space-platform-foundation",
 }
