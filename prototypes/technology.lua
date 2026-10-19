@@ -5,8 +5,10 @@ data:extend({
   { --  advanced foundry
     type = "technology",
     name = "advanced-foundry-tech",
-    icon = "__OCs_foundary_expansion__/graphics/technology/advanced-foundry-tech.png", -- advanced foundry graphics by Hurricane
-    icon_size = 256,                                                                   --icon_mipmaps = 4,
+    -- advanced foundry graphics by Hurricane
+    icon = "__OCs_foundary_expansion__/graphics/technology/advanced-foundry-tech.png",
+    icon_size = 256,
+    --icon_mipmaps = 4,
     prerequisites = { "electromagnetic-science-pack", "metallurgic-science-pack", "agricultural-science-pack", "casting-concrete-tech" },
     unit = {
       ingredients = {
@@ -30,15 +32,14 @@ data:extend({
 })
 
 if not settings.startup["early-advanced-foundry"].value then -- if not early then later
-  table.insert(data.raw.technology["advanced-foundry-tech"].prerequisites, "cryogenic-science-pack")
-  table.insert(data.raw.technology["advanced-foundry-tech"].unit.ingredients, { "cryogenic-science-pack", 1 })
+  local map = { ["advanced-foundry-tech"] = "cryogenic-science-pack" }
+  oc_tech.add_prerequisites(map)
+  oc_tech.add_tech_ingredients(map)
 end
 
 -- add special recipe unlocks to the tech (or multiple ones)
 local recipe_unlocks = {
   -- production
-  ["oc-casting-burner-mining-drill"] = "foundry",
-  ["oc-casting-electric-mining-drill"] = "electric-mining-drill",
   ["oc-casting-pumpjack"] = "oil-gathering",
   ["oc-pulse-assembling-machine-1"] = "automation",
   ["oc-pulse-assembling-machine-2"] = "automation-2",
@@ -57,14 +58,14 @@ local recipe_unlocks = {
   ["oc-pulse-substation"] = "electric-energy-distribution-2",
   ["oc-pulse-solar-panel"] = { "solar-energy" },
   ["oc-pulse-accumulator"] = { "electric-energy-accumulator" }, -- useless as the battery is chemistry. "fixed" that
-  ["oc-pulse-small-lamp"] = {"lamp"},
+  ["oc-pulse-small-lamp"] = { "lamp" },
 
   -- fluid handling
-  ["oc-casting-offshore-pump"] = { "foundry" },
+  ["oc-casting-offshore-pump"] = { "steam-power" },
   ["oc-casting-pump"] = { "fluid-handling" },
   ["oc-casting-storage-tank"] = { "fluid-handling" },
   ["oc-casting-barrel"] = { "fluid-handling" },
-  ["oc-casting-pipe-to-ground"] = { "foundry" },
+  ["oc-casting-pipe-to-ground"] = { "steam-power" },
   -- item storage
   ["oc-casting-iron-chest"] = { "foundry" },
   ["oc-casting-steel-chest"] = { "steel-processing" },
@@ -83,7 +84,7 @@ local recipe_unlocks = {
   ["oc-casting-turbo-splitter"] = { "turbo-transport-belt" },
   -- logistics - bots
   -- other buildings
-  ["oc-pulse-radar"] = "radar",
+  -- ["oc-pulse-radar"] = "radar",
 
   -- intermediates
   ["oc-casting-engine-unit"] = "engine",
@@ -92,7 +93,7 @@ local recipe_unlocks = {
   ["freezing-water"] = "cryogenic-plant",           -- manually created
 
   -- space platform
-  ["lds-space-platform-foundation"] = {"rocket-silo"},
+  ["lds-space-platform-foundation"] = { "rocket-silo" },
   ["oc-casting-space-platform-foundation"] = { "rocket-silo" },
   ["tungsten-space-platform-foundation"] = { "rocket-silo" },
   ["oc-casting-lds-space-platform-foundation"] = { "rocket-silo" },
@@ -103,4 +104,10 @@ local recipe_unlocks = {
   ["oc-casting-cargo-wagon"] = { "railway" },
   ["oc-casting-fluid-wagon"] = { "fluid-wagon" },
 }
+if mods["OCs_stone_casting"] then
+  recipe_unlocks["oc-casting-electric-furnace"] =  "lava-to-stone-tech"
+  recipe_unlocks["oc-casting-burner-mining-drill"] = "lava-to-stone-tech"
+  recipe_unlocks["oc-casting-electric-mining-drill"] = "lava-to-stone-tech"
+  oc_tech.add_prerequisites({ ["lava-to-stone-tech"] = {"advanced-material-processing-2", "electric-mining-drill"} })
+end
 oc_tech.add_recipe_unlocks(recipe_unlocks)

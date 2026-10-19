@@ -224,12 +224,12 @@ local category_mapping = {
   ["assembling-machine-1"] = { "electromagnetics" },
   ["assembling-machine-2"] = { "electromagnetics" },
   ["assembling-machine-3"] = { "electromagnetics" },
-  ["electric-furnace"] = { "metallurgy" }, -- since the other furnaces are also metallurgy, introduced by [OCs lava casting].
+
   -- intermediates
   ["engine-unit"] = { "metallurgy" },                -- non-electric engine. no handcrafting
   ["electric-engine-unit"] = { "electromagnetics" }, -- electric engine
-  ["lithium-plate"] = { "metallurgy", "smelting" },  -- category does not exist
-  ["battery"] = { "electromagnetics" },              -- cheesy such that akkumulator can be directly crafted in EMplant, too
+  ["lithium-plate"] = { "metallurgy", "smelting" },
+  ["battery"] = { "electromagnetics" },              -- cheesy such that accumulators can be directly crafted in EMplant, too
   -- logistics - robots
   ["roboport"] = { "electromagnetics" },
   ["flying-robot-frame"] = { "electromagnetics" },
@@ -265,7 +265,6 @@ local category_mapping = {
   -- logistics others
   -- ["foundation"] = {"metallurgy"}, -- to cheaty? I rather want them to use my other recipe
 
-
   -- Space
   -- ["space-platform-foundation"] = { "metallurgy" }, -- just use the casting recipe
   -- ["tungsten-space-platform"] = { "metallurgy"}, -- just use the casting recipe
@@ -275,16 +274,16 @@ local category_mapping = {
   ["asteroid-collector"] = { "electromagnetics" },
   ["crusher"] = { "electromagnetics" },
   ["thruster"] = { "electromagnetics" },
-
 }
+if mods["OCs_stone_casting"] then
+  category_mapping["electric-furnace"] = { "metallurgy" } -- since the other furnaces are also metallurgy, introduced by [OCs lava casting]
+end
 oc_recipe.add_crafting_categories(category_mapping)
 
 -- create new recipes for foundry, EMplant, etc.
 local new_recipes_dict = {
   ["lab"] = "electromagnetics",
   -- production
-  ["burner-mining-drill"] = "metallurgy",
-  ["electric-mining-drill"] = "metallurgy",
   ["pumpjack"] = "metallurgy",
   ["assembling-machine-1"] = "electromagnetics",
   ["assembling-machine-2"] = "electromagnetics",
@@ -340,7 +339,7 @@ local new_recipes_dict = {
   ["electric-engine-unit"] = "electromagnetics",
   -- space related
   ["space-platform-foundation"] = "metallurgy",
-  -- ["lds-space-platform-foundation"] = "metallurgy", -- less useful than I think
+  -- ["lds-space-platform-foundation"] = "metallurgy", -- less useful than I thought
   ["tungsten-space-platform-foundation"] = "metallurgy",
 
   -- vehicles
@@ -348,9 +347,14 @@ local new_recipes_dict = {
   ["cargo-wagon"] = "metallurgy",
   ["fluid-wagon"] = "metallurgy",
 
-  -- Space
+  -- Space -- less useful than I thought
   -- ["space-platform-hub"] = "metallurgy",
   -- ["cargo-bay"] = "electromagnetics",
   -- ["asteroid-collector"] = "electromagnetics",
 }
+if mods["OCs_stone_casting"] then
+  new_recipes_dict["burner-mining-drill"] = "metallurgy"
+  new_recipes_dict["electric-mining-drill"] = "metallurgy"
+  new_recipes_dict["electric-furnace"] = { "metallurgy" }
+end
 generator_api.batch_generator(new_recipes_dict)

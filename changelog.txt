@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.6
+Date: 2026-10-19
+  Compatibility:
+    - Marking [OCs Ammo and Armor] & [OCs Stone Casting] as recommendation. Deactivating them will deactivate few bonus recipes and crafting options.
+    - Adding [Lunar Panel] compatibility.
+    - If [The Sun is Dead] mod is active, the [Advanced Solar Panel] special recipes for the elite and ultimative solar panels is removed.
+      This prevents a crash and is probably intended by the former mod. You can still use the [Lunar Panel] alternatives.
+  Changes:
+    - Alternative casting recipes of underground pipes and offshore pump are now unlocked with steam power.
+    - Changing order in which space foundation is calculated.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.5
 Date: 2026-10-12
   Compatibility:
@@ -7,7 +18,7 @@ Date: 2026-10-12
     - [BZ Lead] compatibility moved from [OCs Ammo and Armor] to here. Lead ammo casting recipes are still in the other mod.
     - Moved armor equipment to [OCs Armor and Ammo] (military and civil).
   Changes:
-    - Pushed casting car and tank to the [OCs Ammo and Armor] mod. It is now optional with.
+    - Pushed casting car and tank to the [OCs Ammo and Armor] mod. It is now optional within.
     - [Advanced Electric Revamped] pulse ultimative accumulator/solar recipe now is a bit better in terms of fluids.
   Bugfixes:
     - Pulsing lamps was impossible to unlock. It is now unlocked with lamps.

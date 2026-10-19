@@ -2,8 +2,10 @@
 local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
 
 local spf_alternatives = {
-  [40] = "lds-space-platform-foundation", -- better or worse than standard?
+  -- [40] = "lds-space-platform-foundation", -- better or worse than standard?
+  [25] = "oc-casting-space-platform-foundation",
   [20] = "space-platform-foundation",
+  [15] = "oc-casting-tungsten-space-platform-foundation",
   [10] = "tungsten-space-platform-foundation",
 }
 generator_api.register_single_alt_recipe("metallurgy", "space-platform-foundation", spf_alternatives)
