@@ -2,8 +2,9 @@ local generator_api = require("__OCs_base_assets__.prototypes.utils.api")
 local oc_tech = require("__OCs_base_assets__.prototypes.utils.oc_tech")
 local oc_recipe = require("__OCs_base_assets__.prototypes.utils.oc_recipe")
 
-log("Space solar panels had weight " .. data.raw.item["space-solar-panel"].weight .. "kg. I've set them to exactly 120kg")
-data.raw.item["space-solar-panel"].weight = 120 * kg
+local weight = data.raw.item["space-solar-panel"].weight
+log("Space solar panels had weight " .. tostring(weight) .. "kg. I've set them to exactly 120kg")
+weight = 120 * kg
 -- making it a clean value as shown and not some abitrary fraction of a kg.
 -- If weight is 115 or 120, is not even cheaty, as it was automatically set to slightly more than 115 kg.
 
