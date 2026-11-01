@@ -37,18 +37,14 @@ if mods["maraxsis"] then
       allow_productivity = true,
     }
   })
-  oc_tech.add_recipe_unlocks({
-    ["fake-electric-engine-unit"] = "electric-engine",
-  })
+  oc_tech.add_recipe_unlocks({ ["fake-electric-engine-unit"] = "electric-engine", })
 end
 
 local vulcanus = false
--- Any Planet Start
+-- Any Planet Start or Planet Picker
 if mods["any-planet-start"] then
   vulcanus = settings.startup["aps-planet"].value == "vulcanus"
-end
--- Planet Picker
-if not vulcanus and mods["planet-picker"] then
+elseif mods["planet-picker"] or mods["planet-picker-21patch"] then
   vulcanus = settings.startup["oc-pp-vulcanus"].value
 end
 
@@ -81,7 +77,7 @@ if vulcanus then
         { type = "fluid", name = "sulfuric-acid", amount = 100 },
       },
       results = {
-        { type = "item",  name = "sulfur", amount = 5 },
+        { type = "item",  name = "sulfur", amount = 2, extra_count_fraction = 0.5 },
         { type = "fluid", name = "water",  amount = 50, ignored_by_stats = 50 },
       },
       allow_productivity = false,

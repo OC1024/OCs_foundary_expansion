@@ -48,6 +48,10 @@ if mods["planet-muluna"] then -- also counts as small overhaul
   require("prototypes.compatibility.planet-muluna")
 end
 
+if mods["Paracelsin"] then
+  require("prototypes.compatibility.Paracelsin")
+end
+
 -- overhaul mods
 if mods["aai-industry"] then
   require("prototypes.compatibility.aai-industry")

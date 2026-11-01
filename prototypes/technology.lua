@@ -9,7 +9,7 @@ data:extend({
     icon = "__OCs_foundary_expansion__/graphics/technology/advanced-foundry-tech.png",
     icon_size = 256,
     --icon_mipmaps = 4,
-    prerequisites = { "electromagnetic-science-pack", "metallurgic-science-pack", "agricultural-science-pack", "casting-concrete-tech" },
+    prerequisites = { "electromagnetic-science-pack", "metallurgic-science-pack", "agricultural-science-pack", },
     unit = {
       ingredients = {
         { "automation-science-pack",      2 },
@@ -30,6 +30,7 @@ data:extend({
     },
   },
 })
+oc_tech.add_prerequisites({ ["advanced-foundry-tech"] = "casting-concrete-tech"})
 
 if not settings.startup["early-advanced-foundry"].value then -- if not early then later
   local map = { ["advanced-foundry-tech"] = "cryogenic-science-pack" }

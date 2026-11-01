@@ -1,8 +1,16 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.7
-Date: 2026-10-24
+Date: 2026-11-01
   Bugfixes:
-    - Fixed a crash with [space solar panels]
+    - Fixed a startup crash with [space solar panels]
+    - Fixed a startup crash with [Planet Picker]. This is supported along [Planet Picker 2.1 Patch] mod.
+    - Fixed a startup crash if missing [OCs Lava Casting].
+  Balancing:
+    - Reduced sulfur yield from 5 to 2.5 in the sulfur recovery recipe to reduce the efficiency of the infinite loop.
+  Changes:
+    - Set mod settings by default to true for [AAI Containers] and [Factorissimo 2] compatibility.
+  Compatibility:
+    - Added partial [Paracelsin] compatibility. Intermediate products can be casted, but not pipes and stuff (the resulting recipes were inconsistent).
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.6
 Date: 2026-10-19
